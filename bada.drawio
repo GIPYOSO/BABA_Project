@@ -1,0 +1,1594 @@
+<mxfile host="65bd71144e">
+    <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+        <mxGraphModel dx="2908" dy="1355" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-1" value="NOTES" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1310" y="-180" width="460" height="430" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-2" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="40" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-3" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="nSgi-go1DFLOJk9IG7n2-2" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-4" value="note_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-2" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-5" value="노트 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-2" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-6" value="int" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-2" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-7" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-2" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-8" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="nSgi-go1DFLOJk9IG7n2-2" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-9" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="70" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-10" value="FK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1" parent="nSgi-go1DFLOJk9IG7n2-9" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-11" value="user_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-9" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-12" value="노트 생성자 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-9" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-13" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-9" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-14" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-9" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-15" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-9" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-16" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="100" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-17" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-16" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-18" value="folder_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-16" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-19" value="폴더 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-16" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-20" value="int" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-16" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-21" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-16" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-22" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-16" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-30" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="130" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-31" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-30" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-32" value="title" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-30" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-33" value="노트 제목" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-30" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-34" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-30" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-35" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-30" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-36" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-30" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-37" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="160" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-38" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-37" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-39" value="contents" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-37" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-40" value="음성 기록 내용" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-37" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-41" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-37" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-42" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-37" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-43" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-37" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-44" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="190" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-45" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-44" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-46" value="length" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-44" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-47" value="음성 파일 길이" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-44" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-48" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-44" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-49" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-44" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-50" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-44" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-51" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="220" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-52" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-51" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-53" value="file_url" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-51" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-54" value="음성 파일 " style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-51" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-55" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-51" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-56" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-51" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-57" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-51" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-58" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="250" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-59" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-58" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-60" value="memo" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-58" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-61" value="메모" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-58" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-62" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-58" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-63" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-58" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-64" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-58" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-65" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="280" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-66" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-65" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-67" value="favorites" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-65" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-68" value="노트 즐겨찾기" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-65" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-69" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-65" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-70" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-65" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-71" value="Y/N" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-65" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-72" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="310" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-73" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-72" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-74" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-72" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-75" value="비밀번호" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-72" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-76" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-72" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-77" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-72" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-78" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-72" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-79" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="340" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-80" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-79" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-81" value="use_at" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-79" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-82" value="노트 삭제 여부" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-79" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-83" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-79" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-84" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-79" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-85" value="Y/N" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-79" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-86" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="370" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-87" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-86" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-88" value="created_at" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-86" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-89" value="노트 생성일자" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-86" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-90" value="datetime" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-86" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-91" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-86" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-92" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-86" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-93" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-1" vertex="1">
+                    <mxGeometry y="400" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-94" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-93" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-95" value="updated_at" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-93" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-96" value="노트 수정일자" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-93" vertex="1">
+                    <mxGeometry x="130" width="130" height="30" as="geometry">
+                        <mxRectangle width="130" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-97" value="datetime" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-93" vertex="1">
+                    <mxGeometry x="260" width="70" height="30" as="geometry">
+                        <mxRectangle width="70" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-98" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-93" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-99" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-93" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-100" value="TO_DO_LISTS" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
+                    <mxGeometry y="-330" width="460" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-101" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="nSgi-go1DFLOJk9IG7n2-100" vertex="1">
+                    <mxGeometry y="40" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-102" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="nSgi-go1DFLOJk9IG7n2-101" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-103" value="list_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-101" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-104" value="리스트 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-101" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-105" value="int" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-101" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-106" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-101" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-107" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="nSgi-go1DFLOJk9IG7n2-101" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-115" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-100" vertex="1">
+                    <mxGeometry y="70" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-116" value="FK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1" parent="nSgi-go1DFLOJk9IG7n2-115" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-117" value="user_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-115" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-118" value="유저 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-115" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-119" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-115" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-120" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-115" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-121" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-115" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-122" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-100" vertex="1">
+                    <mxGeometry y="100" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-123" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-122" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-124" value="contents" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-122" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-125" value="리스트 내용" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-122" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-126" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-122" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-127" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-122" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-128" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-122" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-129" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-100" vertex="1">
+                    <mxGeometry y="130" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-130" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-129" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-131" value="check_at" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-129" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-132" value="리스트 체크 여부" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-129" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-133" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-129" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-134" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-129" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-135" value="Y/N" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-129" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-136" value="CALENDAR" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
+                    <mxGeometry y="90" width="460" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-137" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="nSgi-go1DFLOJk9IG7n2-136" vertex="1">
+                    <mxGeometry y="40" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-138" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="nSgi-go1DFLOJk9IG7n2-137" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-139" value="cal_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-137" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-140" value="캘린더 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-137" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-141" value="int" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-137" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-142" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-137" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-143" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="nSgi-go1DFLOJk9IG7n2-137" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-144" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-136" vertex="1">
+                    <mxGeometry y="70" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-145" value="FK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1" parent="nSgi-go1DFLOJk9IG7n2-144" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-146" value="user_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-144" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-147" value="유저 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-144" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-148" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-144" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-149" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-144" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-150" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-144" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-151" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-136" vertex="1">
+                    <mxGeometry y="100" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-152" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-151" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-153" value="date" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-151" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-154" value="캘린더 날짜" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-151" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-155" value="date" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-151" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-156" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-151" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-157" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-151" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-158" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-136" vertex="1">
+                    <mxGeometry y="130" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-159" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-158" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-160" value="memo" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-158" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-161" value="캘린더 내용" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-158" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-162" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-158" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-163" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-158" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-164" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-158" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-165" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-136" vertex="1">
+                    <mxGeometry y="160" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-166" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-165" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-167" value="use_at" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-165" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-168" value="날짜 삭제 여부" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-165" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-169" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-165" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-170" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-165" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-171" value="Y/N" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-165" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-172" value="COMMENTS" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1920" y="-120" width="460" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-173" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="nSgi-go1DFLOJk9IG7n2-172" vertex="1">
+                    <mxGeometry y="40" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-174" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="nSgi-go1DFLOJk9IG7n2-173" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-175" value="com_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-173" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-176" value="댓글 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-173" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-177" value="int" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-173" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-178" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-173" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-179" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="nSgi-go1DFLOJk9IG7n2-173" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-180" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-172" vertex="1">
+                    <mxGeometry y="70" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-181" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-180" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-182" value="user_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-180" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-183" value="댓글 생성자 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-180" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-184" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-180" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-185" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-180" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-186" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-180" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-187" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-172" vertex="1">
+                    <mxGeometry y="100" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-188" value="FK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1" parent="nSgi-go1DFLOJk9IG7n2-187" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-189" value="note_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-187" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-190" value="노트 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-187" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-191" value="int" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-187" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-192" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-187" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-193" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-187" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-194" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-172" vertex="1">
+                    <mxGeometry y="130" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-195" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-194" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-196" value="comment" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-194" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-197" value="댓글 내용" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-194" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-198" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-194" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-199" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-194" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-200" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-194" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-201" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-172" vertex="1">
+                    <mxGeometry y="160" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-202" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-201" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-203" value="use_at" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-201" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-204" value="댓글 삭제 여부" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-201" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-205" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-201" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-206" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-201" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-207" value="Y/N" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-201" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-208" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-172" vertex="1">
+                    <mxGeometry y="190" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-209" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-208" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-210" value="created_at" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-208" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-211" value="댓글 생성일자" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-208" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-212" value="datetime" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-208" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-213" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-208" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-214" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-208" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-215" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-172" vertex="1">
+                    <mxGeometry y="220" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-216" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-215" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-217" value="updated_at" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-215" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-218" value="댓글 수정일자" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-215" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-219" value="datetime" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-215" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-220" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-215" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-221" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-215" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-222" value="SHARE_NOTES" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1890" y="200" width="460" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-223" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="nSgi-go1DFLOJk9IG7n2-222" vertex="1">
+                    <mxGeometry y="40" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-224" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="nSgi-go1DFLOJk9IG7n2-223" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-225" value="share_note_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-223" vertex="1">
+                    <mxGeometry x="30" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-226" value="공유 노트 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-223" vertex="1">
+                    <mxGeometry x="120" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-227" value="int" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-223" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-228" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-223" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-229" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="nSgi-go1DFLOJk9IG7n2-223" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-230" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-222" vertex="1">
+                    <mxGeometry y="70" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-231" value="FK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1" parent="nSgi-go1DFLOJk9IG7n2-230" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-232" value="note_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-230" vertex="1">
+                    <mxGeometry x="30" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-233" value="노트 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-230" vertex="1">
+                    <mxGeometry x="120" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-234" value="int" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-230" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-235" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-230" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-236" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-230" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-237" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-222" vertex="1">
+                    <mxGeometry y="100" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-238" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-237" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-239" value="share_user_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-237" vertex="1">
+                    <mxGeometry x="30" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-240" value="공유 된 유저 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-237" vertex="1">
+                    <mxGeometry x="120" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-241" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-237" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-242" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-237" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-243" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-237" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-244" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-222" vertex="1">
+                    <mxGeometry y="130" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-245" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-244" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-246" value="share_at" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-244" vertex="1">
+                    <mxGeometry x="30" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-247" value="공유 여부" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-244" vertex="1">
+                    <mxGeometry x="120" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-248" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-244" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-249" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-244" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-250" value="Y/N" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-244" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-251" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-222" vertex="1">
+                    <mxGeometry y="160" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-252" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-251" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-253" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-251" vertex="1">
+                    <mxGeometry x="30" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-254" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-251" vertex="1">
+                    <mxGeometry x="120" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-255" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-251" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-256" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-251" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-257" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-251" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-258" value="FOLDERS" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1920" y="-360" width="460" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-259" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="nSgi-go1DFLOJk9IG7n2-258" vertex="1">
+                    <mxGeometry y="40" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-260" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="nSgi-go1DFLOJk9IG7n2-259" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-261" value="folder_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-259" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-262" value="폴더 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-259" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-263" value="int" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-259" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-264" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-259" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-265" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="nSgi-go1DFLOJk9IG7n2-259" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-266" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-258" vertex="1">
+                    <mxGeometry y="70" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-267" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-266" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-268" value="user_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-266" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-269" value="유저 아이디" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-266" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-270" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-266" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-271" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-266" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-272" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-266" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-273" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-258" vertex="1">
+                    <mxGeometry y="100" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-274" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-273" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-275" value="title" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-273" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-276" value="폴더 이름" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-273" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-277" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-273" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-278" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-273" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-279" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-273" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-280" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-258" vertex="1">
+                    <mxGeometry y="130" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-281" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-280" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-282" value="use_at" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-280" vertex="1">
+                    <mxGeometry x="30" width="80" height="30" as="geometry">
+                        <mxRectangle width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-283" value="사용 여부" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-280" vertex="1">
+                    <mxGeometry x="110" width="120" height="30" as="geometry">
+                        <mxRectangle width="120" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-284" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-280" vertex="1">
+                    <mxGeometry x="230" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-285" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-280" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-286" value="Y/N" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-280" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-294" value="폴더 아이디 not null 이기 때문에 회원 가입 시 DB에 기본 폴더 생성&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="-590" y="-800" width="370" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-295" value="사용할 수 있는 용량에 따라서 데이터를 아예 삭제할지, 상태만 업데이트 할 지 결정" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="-590" y="-730" width="370" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-296" value="USERS" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
+                    <mxGeometry x="-790" y="-140" width="460" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-297" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="nSgi-go1DFLOJk9IG7n2-296" vertex="1">
+                    <mxGeometry y="40" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-298" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="nSgi-go1DFLOJk9IG7n2-297" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-299" value="user_id" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-297" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-300" value="이메일" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-297" vertex="1">
+                    <mxGeometry x="130" width="110" height="30" as="geometry">
+                        <mxRectangle width="110" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-301" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-297" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-302" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;" parent="nSgi-go1DFLOJk9IG7n2-297" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-303" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="nSgi-go1DFLOJk9IG7n2-297" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-304" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-296" vertex="1">
+                    <mxGeometry y="70" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-305" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-304" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-306" value="pwd" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-304" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-307" value="비밀번호" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-304" vertex="1">
+                    <mxGeometry x="130" width="110" height="30" as="geometry">
+                        <mxRectangle width="110" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-308" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-304" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-309" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-304" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-310" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-304" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-311" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-296" vertex="1">
+                    <mxGeometry y="100" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-312" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="nSgi-go1DFLOJk9IG7n2-311" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-313" value="name" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-311" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-314" value="이름" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-311" vertex="1">
+                    <mxGeometry x="130" width="110" height="30" as="geometry">
+                        <mxRectangle width="110" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-315" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-311" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-316" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-311" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-317" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="nSgi-go1DFLOJk9IG7n2-311" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-318" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-296" vertex="1">
+                    <mxGeometry y="130" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-319" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-318" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-320" value="profile_nick" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-318" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-321" value="닉네임" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-318" vertex="1">
+                    <mxGeometry x="130" width="110" height="30" as="geometry">
+                        <mxRectangle width="110" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-322" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-318" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-323" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-318" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-324" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-318" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-325" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-296" vertex="1">
+                    <mxGeometry y="160" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-326" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-325" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-327" value="profile_image" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-325" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-328" value="프로필 이미지" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-325" vertex="1">
+                    <mxGeometry x="130" width="110" height="30" as="geometry">
+                        <mxRectangle width="110" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-329" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-325" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-330" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-325" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-331" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-325" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-332" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-296" vertex="1">
+                    <mxGeometry y="190" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-333" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-332" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-334" value="join_date" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-332" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-335" value="회원가입 한 날짜" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-332" vertex="1">
+                    <mxGeometry x="130" width="110" height="30" as="geometry">
+                        <mxRectangle width="110" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-336" value="datetime" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-332" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-337" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-332" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-338" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-332" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-339" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-296" vertex="1">
+                    <mxGeometry y="220" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-340" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="nSgi-go1DFLOJk9IG7n2-339" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-341" value="con_agree_YN" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-339" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-342" value="약관 동의 여부" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-339" vertex="1">
+                    <mxGeometry x="130" width="110" height="30" as="geometry">
+                        <mxRectangle width="110" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-343" value="varchar" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-339" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-344" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-339" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nSgi-go1DFLOJk9IG7n2-345" value="Y/N" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="nSgi-go1DFLOJk9IG7n2-339" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-8" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="nSgi-go1DFLOJk9IG7n2-296" vertex="1">
+                    <mxGeometry y="250" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-9" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;perimeterSpacing=1;" parent="zrP6xuOplCd_8AWIrapA-8" vertex="1">
+                    <mxGeometry width="30" height="30" as="geometry">
+                        <mxRectangle width="30" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-10" value="con_agree_date" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="zrP6xuOplCd_8AWIrapA-8" vertex="1">
+                    <mxGeometry x="30" width="100" height="30" as="geometry">
+                        <mxRectangle width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-11" value="약관 동의 날짜" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="zrP6xuOplCd_8AWIrapA-8" vertex="1">
+                    <mxGeometry x="130" width="110" height="30" as="geometry">
+                        <mxRectangle width="110" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-12" value="datetime" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="zrP6xuOplCd_8AWIrapA-8" vertex="1">
+                    <mxGeometry x="240" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-13" value="NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="zrP6xuOplCd_8AWIrapA-8" vertex="1">
+                    <mxGeometry x="330" width="90" height="30" as="geometry">
+                        <mxRectangle width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-14" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;strokeColor=default;" parent="zrP6xuOplCd_8AWIrapA-8" vertex="1">
+                    <mxGeometry x="420" width="40" height="30" as="geometry">
+                        <mxRectangle width="40" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="EolbNwfBx3SiURHaZA-V-3" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERone;startArrow=ERone;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;startFill=0;endFill=0;" parent="1" source="nSgi-go1DFLOJk9IG7n2-297" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="-190" y="-80" as="sourcePoint"/>
+                        <mxPoint y="175" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-55" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERone;endFill=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;startArrow=baseDash;startFill=0;" parent="1" source="nSgi-go1DFLOJk9IG7n2-297" target="nSgi-go1DFLOJk9IG7n2-115" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="-195" y="-80" as="sourcePoint"/>
+                        <mxPoint x="-10" y="-250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-64" value="&amp;nbsp; &amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="-460" width="370" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-66" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERone;endFill=0;rounded=0;dashed=1;startArrow=ERzeroToMany;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="nSgi-go1DFLOJk9IG7n2-187" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="-1410" y="-30" as="sourcePoint"/>
+                        <mxPoint x="-1310" y="-125" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-67" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERone;endFill=0;rounded=0;dashed=1;startArrow=ERzeroToMany;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="nSgi-go1DFLOJk9IG7n2-9" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="-805" y="30" as="sourcePoint"/>
+                        <mxPoint x="-655" y="-90" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-69" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;endFill=0;rounded=0;dashed=1;startArrow=ERone;startFill=0;" parent="1" target="nSgi-go1DFLOJk9IG7n2-16" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="-1460" y="-310" as="sourcePoint"/>
+                        <mxPoint x="-1300" y="-220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zrP6xuOplCd_8AWIrapA-73" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERone;endFill=0;rounded=0;dashed=1;startArrow=ERzeroToMany;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="nSgi-go1DFLOJk9IG7n2-230" target="nSgi-go1DFLOJk9IG7n2-2" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="-1449.9999999999995" as="sourcePoint"/>
+                        <mxPoint x="-1300.0000000000005" y="-120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
