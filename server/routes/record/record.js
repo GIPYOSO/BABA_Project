@@ -4,7 +4,7 @@ const { Note, Folder } = require('./../../models')
 const axios = require('axios')
 const multer = require("multer")
 const upload = multer();
- 
+const FormData = require("form-data"); 
 
 // 내 노트 등록
 //http://localhost:8080/record/ 
@@ -130,29 +130,63 @@ router.get("/vito/token", async (req, res, next) => {
     .catch(e => next(e))
 })
 
-router.post("/vito/getId", upload.fields([{ name: 'file' }, { name: 'config' }, { name: 'token'}]), async (req, res, next) => {
-    console.log(req.token)
-    try {
-        res.json({message: '대기중'})
-    } catch(e) {
-        console.log(e)
-    }
+// vito id 발급 후 전사결과 출력
+router.post("/vito/getResult", upload.single('file'), async (req, res, next) => {
+    let formData = new FormData()
+
     let TRANSCRIBE_URL = 'https://openapi.vito.ai/v1/transcribe'
-        
+    let CONFIG = '{"diarization":{"use_verification":false},"use_multi_channel":false,"use_itn":false,"use_disfluency_filter":false,"use_profanity_filter":false,"paragraph_splitter": {"min": 10,"max": 50}}'
     
-    await axios.post(TRANSCRIBE_URL, {
-    headers: {
-        'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjU5NjAzNDMsImlhdCI6MTY2NTkzODc0MywianRpIjoibG9RR1Y2NHQ2bkpGZWlpN0liS2UiLCJwbGFuIjoiYmFzaWMiLCJzY29wZSI6InNwZWVjaCIsInN1YiI6IjNici1RR0NNMjZOYnJUQ2psYlExIn0.QT8ibDq0mVup685KhbFxMbxBkyXlJvf_jvLaAV3yl_4`,
-        'content-type': 'application/x-www-form-urlencoded'
+    formData.append('config', CONFIG)
+    formData.append("file", req.file.buffer, {
+        filename: req.file.originalname,
+    })
+        
+    await axios.post(TRANSCRIBE_URL, formData,
+        {
+            headers: {
+            'Authorization': `Bearer ${req.body.token}`,
+            'Content-Type': 'multipart/form-data'
+            }
         }
-    }).then(res => console.log(res.data))
+    )
+    .then(response => {
+        getVITORestlt(response.data.id, req.body.token)
+        .then(data => {
+            // 전사결과가 변환중일경우 stats === transcribing
+            // 전사결과 변환완료 상태로 변할 때 까지 setInterval 사용하여 5초에 한번씩 getVITORestlt() 함수 실행
+            let isStop = data.data.status === "transcribing" ? false : true 
+
+            let interval = setInterval(function() {
+                if (!isStop) {
+                    getVITORestlt(response.data.id, req.body.token).then(
+                        data2 => {
+                            isStop = data2.data.status === "transcribing" ? false : true
+                            let resData = data2.data
+                            res.json({ resData })
+                        })
+                } else {
+                    isStop = true
+                    clearInterval(interval)
+                }
+            }, 5000)
+        })
+    })
+    .catch(e => console.log(e))
 })
 
-
-
-
-
-
+// vito 전사 결과 출력 function
+const getVITORestlt = async (id, token) => {
+    // console.log("id:", id)
+    let TRANSCRIBE_URL = 'https://openapi.vito.ai/v1/transcribe'
+    return await axios.get(`${TRANSCRIBE_URL}/${id}` ,
+    {
+        headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+        }
+    })
+}
 
 module.exports = router
 
