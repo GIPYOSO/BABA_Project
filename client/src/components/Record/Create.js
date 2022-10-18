@@ -5,13 +5,22 @@ import axios from 'axios';
 import server from './../../config/server.json';
 import { useCookies } from "react-cookie";
 import {CircularProgress} from '@mui/material';
+import TabMenu from "./../Common/TabMenu/TabMenu";
 
 const Create = () => {
     const [cookies, setCookie, removeCookie] = useCookies(["token"]);
 
     let FILE = useLocation().state;
+
     const [contentText, setContentText] = useState('');
+
     const [transformFinishState, setTransformFinishState] = useState(false);
+
+    const [noteData, setNoteData] = useState({ // test data
+        user_id: cookies.token.user_id,
+        title: '',
+        content: ''
+    })
 
     useEffect(() => {
         createFile(FILE); //회의록 생성
@@ -60,6 +69,10 @@ const Create = () => {
         });
         setContentText(text);
         setTransformFinishState(true);
+        setNoteData({
+            ...noteData,
+            content: text
+        })
         //console.log("text 데이터: ", text);
         return contentText;
     }
@@ -67,19 +80,47 @@ const Create = () => {
     let saveFileData = async () => {
 
     }
+    
+    let onChangeData = (e) => {
+        setNoteData({
+            ...noteData,
+            [e.target.name] : e.target.value
+        })
+    } 
 
+    // inline style
+    const leftBox = {
+        float:'left',
+        width: '60%'
+    }
 
+    const rightBox = {
+        float:'right',
+        width: '400px'
+    }
+    const textarea = {
+        width: '100%',
+        height: '100vh',
+        border: 'none',
+        resize: 'none'
+    }
     return (
         <>
              {
                 transformFinishState ?
                     (
                         <>
-                            <div>헤드라인</div>
-                            <div style={{ whiteSpace: "pre-wrap" }}>
-                                {contentText}
+                            <div style={leftBox}>
+                                <div><input type="text" name="title" /></div>
+                                <textarea value={contentText} name="content" style={textarea}></textarea>
+                                {/* <div style={{ whiteSpace: "pre-wrap" }}>
+                                    {contentText}
+                                </div> */}
                             </div>
-                            <button>저장</button>
+                            <div style={rightBox}>
+                                <TabMenu noteData={noteData} />
+                            </div>
+                        
                         </>
                     )
                     : (<CircularProgress />)
