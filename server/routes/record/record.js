@@ -66,6 +66,49 @@ router.get('/', async (req, res, next) => {
 })
 
 // 내 노트 수정
+//http://localhost:8080/record/user_id/update 
+router.post("/:user_id/update", async (req, res, next) => {
+    console.log(req);
+    
+    let { user_id } = req.params     // 이부분 수정해야 함 => user_id 는 노트 삭제할 때 사용하면 안됨
+    let { title ,contents,  file_url , memo, favorites} = req.body;
+
+    try {
+        await Note.updateOne({ user_id }, {
+            title,
+            contents,
+            file_url,
+            memo,
+            favorites
+        }) ;
+
+        res.json({
+            status : true,
+            message: "일기장을 수정했습니다."
+        }) 
+    } catch(e) {
+        next(e);
+    }
+});
+
+//내 노트 삭제
+//http://localhost:8080/record/user_id/delete
+router.post("/:shortId/delete", async (req, res, next) => {
+    let { user_id } = req.params;
+    try {
+
+        //shortId에 해당하는 일기장을 삭제함.    => user_id 에 해당하는 것을 삭제 하면 안됨
+        await Daily.deleteOne({ shortId });
+
+        res.json({
+            status: true,
+            message: "일기장을 삭제하였습니다."
+        });
+
+    } catch (e) {
+        next(e);
+    }
+})
 
 // vito 토큰 발급
 router.get("/vito/token", async (req, res, next) => {

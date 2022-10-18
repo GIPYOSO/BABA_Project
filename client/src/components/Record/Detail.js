@@ -11,16 +11,27 @@ const Detail = () => {
 
     const [NoteData, setNoteData] = useState({
         user_id : cookies.token.user_id,
-        title : "테스트1",
+        title : "테스트",
         contents : "테스트1 내용입니다",
         file_url : "",
         memo : "이건 메모에요",
         favorites: "",
     });
 
+    const [newData, setNewData] = useState({
+      user_id : cookies.token.user_id,
+      title : "수정1",
+      contents : "수정했습니다",
+      file_url : "",
+      memo : "수정한 메모에요",
+      favorites: "",
+  });
+
     useEffect(() => {
-        console.log(NoteData);
-        getNoteData()
+        // console.log(NoteData);
+        // getNoteData()
+
+        updateNoteData()
         .then((res) => {
           console.log('응답코드입니다', res);
           setNoteData(res.data.user);
@@ -30,6 +41,7 @@ const Detail = () => {
         });
     }, []);
 
+
     //노트 데이터를 요청하는 함수
     let getNoteData = async () => {
         return await axios.post("http://localhost:8080/record", NoteData , {
@@ -38,6 +50,18 @@ const Detail = () => {
           },
         });
       };
+
+    let updateNoteData = async () => {
+
+      return await // http://localhost:8080/record/user_id/update
+      axios.post(`http://localhost:8080/record/${newData.user_id}/update`,
+      newData, {
+        headers: {
+          accessToken: cookies.token.accessToken
+        }
+
+      })
+    }
 
 
 

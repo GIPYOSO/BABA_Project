@@ -15,7 +15,7 @@ function MeMi(){
             <div className="MMBox">
                 <h3>회의록 페이지</h3>
                 <List />
-                {/* <Detail /> */}
+                <Detail />
             </div>
             {/* <div className="noteBox">
                 <p>메모</p>
