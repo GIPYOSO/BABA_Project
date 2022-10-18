@@ -5,7 +5,8 @@ import MainPage from "./pages/MainPage";
 import Mypage from "./pages/Mypage";
 import RecordPage from "./pages/RecordPage";
 import Register from "./pages/Register";
-import MeetingMinutes from './components/Common/MeetingMinutes/MeetingMinutes'
+import MeetingMinutes from "./components/Common/MeetingMinutes/MeetingMinutes";
+import fileUpload from "./components/Record/FileUpload";
 
 function App() {
   return (
@@ -16,10 +17,10 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/register" element={<Register />} />
         <Route path="/record" element={<RecordPage />}>
-          <Route path="list" />
-          <Route path="create" />
-          <Route path="detail" />
-          <Route path="fileUpload" />
+          <Route path="list" element={<RecordPage />} />
+          <Route path="create" element={<RecordPage />} />
+          <Route path="detail" element={<RecordPage />} />
+          <Route path="fileUpload" element={<RecordPage />} />
         </Route>
         <Route path="/mypage" element={<Mypage />} />
       </Routes>

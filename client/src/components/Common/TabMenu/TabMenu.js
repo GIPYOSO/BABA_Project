@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Component } from "react";
 import { useState } from "react";
-import axios from 'axios'
+import axios from "axios";
 
 import styled from "styled-components";
 import Memo from "./Memo";
@@ -12,117 +12,99 @@ import Todo from "./todo-list/TodoTotal";
 // import $ from "jquery";
 
 const TabBox = styled.div`
-    max-width: 400px; width: 100%;
+  max-width: 400px;
+  width: 100%;
 `;
 
 const TabMenuBox = styled.div`
-    width: 100%;
+  width: 100%;
 `;
 
 const TabContentBox = styled.div`
-    width: 100; border: 1px solid ##3e80bd;
+  width: 100;
+  border: 1px solid ##3e80bd;
 `;
 
 const TabBtn = styled.button`
-    font-size: 20px; color: #3e80bd; border: 1px solid #3e80bd;
-    cursor: pointer; background-color: #fff; line-height: 40px;
-    width: 33.33%;
+  font-size: 20px;
+  color: #3e80bd;
+  border: 1px solid #3e80bd;
+  cursor: pointer;
+  background-color: #fff;
+  line-height: 40px;
+  width: 33.33%;
 `;
 
 const TabSaveBtn = styled.button`
-    width: 80px;
+  width: 80px;
 `;
 
-
 let Tabmenu = (props) => {
-    const [ChangeMenu, setChangeMenu] = useState("");
-    let noteData = props.noteData
-    console.log("tabmenu", props.noteData)
-    let changeState = (name) => {
-        setChangeMenu(name);
-        return;
-    }
+  const [ChangeMenu, setChangeMenu] = useState("");
+  let noteData = props.noteData;
+  console.log("tabmenu", props.noteData);
+  let changeState = (name) => {
+    setChangeMenu(name);
+    return;
+  };
 
-    let state = (name) =>{
-        changeState(name);
-        switch(name){
-            case "memo":
-                return <Memo />;
-        }
+  let state = (name) => {
+    changeState(name);
+    switch (name) {
+      case "memo":
+        return <Memo />;
     }
+  };
 
-    return (
-        <TabBox>
-            <TabMenuBox>
-                <TabBtn
-                    onClick={() => {
-                    changeState("memo");
-                }}>
-                    {""}메모
-                </TabBtn>
-                <TabBtn
-                    onClick={() => {
-                    changeState("calender");
-                }}>
-                    {""}캘린더
-                </TabBtn>
-                <TabBtn
-                    onClick={() => {
-                    changeState("todo");
-                }}>
-                    {""}할 일{""}
-                </TabBtn>
-            </TabMenuBox>
-            <TabContentBox>
-                    {  
-                       ChangeMenu === "memo" ? <Memo noteData={props.noteData}/>
-                    :  ChangeMenu === "calender" ? <Calendar />
-                    :  ChangeMenu === "todo" ? <Todo/> : <Memo noteData={noteData}/>
-                    }
-            </TabContentBox>
-           
-        </TabBox>
-        
-    )
-}
+  return (
+    <TabBox>
+      <TabMenuBox>
+        <TabBtn
+          onClick={() => {
+            changeState("memo");
+          }}
+        >
+          {""}메모
+        </TabBtn>
+        <TabBtn
+          onClick={() => {
+            changeState("calender");
+          }}
+        >
+          {""}캘린더
+        </TabBtn>
+        <TabBtn
+          onClick={() => {
+            changeState("todo");
+          }}
+        >
+          {""}할 일{""}
+        </TabBtn>
+      </TabMenuBox>
+      <TabContentBox>
+        {ChangeMenu === "memo" ? (
+          <Memo noteData={props.noteData} />
+        ) : ChangeMenu === "calender" ? (
+          <Calendar />
+        ) : ChangeMenu === "todo" ? (
+          <Todo />
+        ) : (
+          <Memo noteData={noteData} />
+        )}
+      </TabContentBox>
+    </TabBox>
+  );
+};
 export default Tabmenu;
 
-
-
-
-
-
-
-
-{/* <div>
+{
+  /* <div>
                 <button onClick={change}></button>
                 {
                     ChangeMenu === false ? <Memo value="기표"/> : <Calendar />
                 }
-            </div> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </div> */
+}
 
 // var tabBtn = null;
 // var tabPg = null;
@@ -173,7 +155,7 @@ export default Tabmenu;
 //                 <p>메모</p>
 //                 <p>
 //                   <textarea
-//                     name="desc" 
+//                     name="desc"
 //                     placeholder="description"
 //                     value={this.state.desc}
 //                     onChange={this.inputFormHandler}
@@ -195,4 +177,3 @@ export default Tabmenu;
 //       );
 //     }
 //   }
-

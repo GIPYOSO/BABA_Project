@@ -2,48 +2,34 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import server from "./../../../config/server.json";
-import { useCookies } from 'react-cookie';
+import { useCookies } from "react-cookie";
 
 const TabSaveBtn = styled.button`
   width: 80px;
 `;
-
 let Memo = (props) => {
-  const [cookies, setCookie, removeCooke] = useCookies(['token'])
-
-  const [memotext, setText] = useState("");
+  const [cookies, setCookie, removeCooke] = useCookies(["token"]);
 
   let propsData = props.noteData;
 
   const [noteData, setNoteData] = useState({
     user_id: cookies.token.user_id,
-    title: propsData.title, 
-    contents: propsData.title,
-    memo: memotext
+    title: propsData.title,
+    contents: propsData.contents,
+    memo: "",
   });
-
-  console.log("memo", props.noteData)
-
   let onChange = (e) => {
-    setText(e.target.value);
+    setNoteData({
+      ...noteData,
+      memo: e.target.value,
+    });
   };
 
-  let textSubmitBtn = async (e) => {
+  let submitBtn = async (e) => {
 
-    setText(e.target.value);
-
-    if (memotext === '') {
-        alert("메모를 입력해 주세요");
-    } else {
-        console.log(memotext);
-        await axios.post(`${server.url}/record`, noteData)
-        .then(res => console.log("등록성공", res))
-    }
-
-  };
-
-  let onReset = () => {
-    setText("");
+    await axios
+      .post(`${server.url}/record`, noteData)
+      .then((res) => console.log("등록성공", res));
   };
 
 
@@ -56,12 +42,12 @@ let Memo = (props) => {
       <form id="note" className="note tabPg active">
         <p>메모</p>
         <p>
-          <input onChange={onChange} value={memotext}></input>
+          <input onChange={onChange}></input>
         </p>
       </form>
 
-      <TabSaveBtn onClick={textSubmitBtn}>저장</TabSaveBtn>
-      <div>{memotext}</div>
+      <TabSaveBtn onClick={submitBtn}>저장</TabSaveBtn>
+      {/* <div>{memotext}</div> */}
     </>
   );
 };
