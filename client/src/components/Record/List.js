@@ -6,9 +6,11 @@ import axios from 'axios'
 import { textAlign } from '@mui/system';
 import { useState } from 'react';
 import moment from 'moment'
+import { useNavigate } from 'react-router-dom';
 
 const List = () => {
     const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+    const navigate = useNavigate();
     const [noteData, setNoteData] = useState([])
     const [page, setPage] = useState(1);
 
@@ -25,8 +27,12 @@ const List = () => {
         }
         getNoteData()
     }, [])
-    
-    let onChangePagenation = (event, value) => {
+
+    const gotoDetail = (data) => {
+        navigate('/record/detail', { state: data });
+    } 
+
+    const onChangePagenation = (event, value) => {
         console.log(value)
         //페이지에 따라 노트 데이터를 요청하는 함수
         // let getNoteData = async () => {
@@ -78,8 +84,8 @@ const List = () => {
                     <tbody>
                         {   
                             noteData.note.map((data, i) => (
-                                <tr key={i}>
-                                    <th><input type="checkbox" /></th>
+                                <tr key={i} onClick={() => gotoDetail(data)}>
+                                    <td><input type="checkbox" /></td>
                                     <td>{data.title}</td>
                                     <td>{moment(data.updatedAt).format('YYYY-MM-DD')}</td>
                                 </tr>
