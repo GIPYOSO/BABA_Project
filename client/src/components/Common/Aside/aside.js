@@ -10,8 +10,14 @@ import Trash from "./../../../assets/images/icon-trash.png";
 
 import "./../../../css/import.css";
 
+import { useNavigate } from 'react-router-dom';
+
 function AsideList(){
-    return(
+    const navigate = useNavigate()
+    let clickNewTemplate = () => {
+        navigate('/record/fileUpload')
+    }
+    return( 
         <section className="asideSection">
             <aside>
                 <h1>
@@ -19,7 +25,7 @@ function AsideList(){
                 </h1>
                 
                 <ul>
-                    <li><img src={Plus} />새 템플릿 추가</li>
+                    <li onClick={clickNewTemplate}><img src={Plus}/>새 템플릿 추가</li>
                     <li><img src={Home} />Home</li>
                 </ul>
                 <span>내 노트</span>
