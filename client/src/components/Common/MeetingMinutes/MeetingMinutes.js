@@ -15,12 +15,12 @@ function MeMi(){
             </div>
             <div className="MMBox">
                 <List />
-<<<<<<< Updated upstream
+
                 <Detail />
-=======
+
                 {/* <Detail /> */}
                 <TabMenu />
->>>>>>> Stashed changes
+
             </div>
             {/* <div className="noteBox">
                 <p>메모</p>
