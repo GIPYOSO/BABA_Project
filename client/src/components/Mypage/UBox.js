@@ -9,7 +9,6 @@ color: #504d4d;
 `;
 
 let UBox = () => {
-
     
 
     return(

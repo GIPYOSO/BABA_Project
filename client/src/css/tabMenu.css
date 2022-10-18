@@ -1,0 +1,29 @@
+.MMSection .MMBox::after{
+    display: block; content: ""; clear: both;
+}
+.tabmenuBox{
+    max-width: 547px; width: 100%; float: left;
+}
+.tabMove{
+    list-style: none; width: 100%;
+}
+.tabMove::after{
+    display: block; content: ""; clear: both;
+}
+.tabMove li{
+    float: left; border: 1px solid #000; width: 33.33%; box-sizing: border-box;
+    cursor: pointer; line-height: 55px;
+}
+.tabMove li.active{
+    background-color: #333; color: #fff;
+}
+.tabmenuBox .tabPg{
+    border: 1px solid #d9d9d9; box-sizing: border-box;
+}
+.tabmenuBox section{
+    display: none;
+}
+
+.tabmenuBox section.active{
+    display: block;
+}

@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios'
 import server from './../../config/server.json'
 import {Button} from '@mui/material'
-import { useCookies } from "react-cookie";
-
 
 const Detail = () => {
+<<<<<<< Updated upstream
 
     const [cookies, setCookie, removeCookie] = useCookies(["token"]);
     
@@ -63,6 +62,8 @@ const Detail = () => {
     }
 
     // vito 토큰 발급
+=======
+>>>>>>> Stashed changes
     let getVitoToken = async () => {
         return await axios.get(`${server.url}/record/vito/token`)
                     .then(res => {

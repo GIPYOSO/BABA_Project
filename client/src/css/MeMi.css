@@ -15,9 +15,11 @@
 }
 
 /* record list */
+.MMSection .MMBox::after{
+    display: block; content: ""; clear: both;
+}
 .MMSection .MMBox .list{
-    padding: 40px;
-    background-color: #F7F7F7;
+    padding: 40px; background-color: #F7F7F7; float: left;
 }
 
 .MMSection .MMBox .list h3{
