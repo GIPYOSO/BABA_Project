@@ -22,12 +22,14 @@ let Memo = (props) => {
         })
     }
 
-    let textSubmitBtn = async() => {
-        if(memotext.content === ""){
-            return
-        }
+    let textSubmitBtn = () => {
 
-        return await axios.post(server.url + "/", memotext);
+        memoData();
+        // if(memotext.content === ""){
+        //     return
+        // }
+
+        // return await axios.post(server.url + "/", memotext);
     }
 
 
@@ -42,7 +44,7 @@ let Memo = (props) => {
             <form id="note" className="note tabPg active">
                 <p>메모</p>
                 <p>
-                  <input type="text" onChange={memoData} name="text" id="text"></input>
+                  <input type="text" onClick={textSubmitBtn} name="text" id="text"></input>
                 </p>
             </form>
 
