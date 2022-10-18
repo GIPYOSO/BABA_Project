@@ -6,7 +6,7 @@ import axios from 'axios'
 import styled from "styled-components";
 import Memo from "./Memo";
 import Calendar from "./Calender";
-import Todo from "./Todo";
+import Todo from "./todo-list/TodoTotal";
 // import FullCalendar from "@fullcalendar/react";
 // import dayGridPlugin from "@fullcalendar/daygrid";
 // import $ from "jquery";

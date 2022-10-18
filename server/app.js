@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const userRouter = require("./routes/user/user");
 const recordRouter = require("./routes/record/record");
 const calenderRouter = require("./routes/calender/calender");
+const todoRouter = require("./routes/todo/todo")
 const app = express();
 
 const PORT = 8080;
@@ -27,6 +28,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/user", userRouter);
 app.use("/record", recordRouter);
 app.use("/calender", calenderRouter)
+app.use("/todo" , todoRouter)
+
+
 app.listen(PORT, () => {
   console.log(`open server : ${PORT}`);
 });
