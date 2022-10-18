@@ -2,19 +2,33 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import server from "./../../../config/server.json";
+import { useCookies } from 'react-cookie';
 
 const TabSaveBtn = styled.button`
   width: 80px;
 `;
 
 let Memo = (props) => {
+  const [cookies, setCookie, removeCooke] = useCookies(['token'])
+
   const [memotext, setText] = useState("");
+
+  let propsData = props.noteData;
+
+  const [noteData, setNoteData] = useState({
+    user_id: cookies.token.user_id,
+    title: propsData.title, 
+    contents: propsData.title,
+    memo: memotext
+  });
+
+  console.log("memo", props.noteData)
 
   let onChange = (e) => {
     setText(e.target.value);
   };
 
-  let textSubmitBtn = (e) => {
+  let textSubmitBtn = async (e) => {
 
     setText(e.target.value);
 
@@ -22,7 +36,8 @@ let Memo = (props) => {
         alert("메모를 입력해 주세요");
     } else {
         console.log(memotext);
-        
+        await axios.post(`${server.url}/record`, noteData)
+        .then(res => console.log("등록성공", res))
     }
 
   };
@@ -33,7 +48,7 @@ let Memo = (props) => {
 
 
   useEffect(() => {
-    console.log(memotext);
+    // console.log(memotext);
   }, []);
 
   return (
