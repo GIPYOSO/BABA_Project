@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Component } from "react";
 import { useState } from "react";
+import axios from 'axios'
+
 import styled from "styled-components";
 import Memo from "./Memo";
 import Calendar from "./Calender";
@@ -27,9 +29,9 @@ const TabBtn = styled.button`
     width: 33.33%;
 `;
 
-// const TabSaveBtn = styled.input`
-//     width: 80px; color: #000; background-color: #3e80bd; fonts-size: 18px;
-// `;
+const TabSaveBtn = styled.button`
+    width: 80px;
+`;
 
 
 let Tabmenu = () => {
@@ -77,6 +79,7 @@ let Tabmenu = () => {
                     :  ChangeMenu === "todo" ? <Todo/> : <Memo/>
                     }
             </TabContentBox>
+           
         </TabBox>
         
     )
