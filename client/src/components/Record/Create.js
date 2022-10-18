@@ -1,14 +1,15 @@
 //import { useLocation } from 'react-router-dom'
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import axios from 'axios';
 import server from './../../config/server.json';
 import { useCookies } from "react-cookie";
 import {CircularProgress} from '@mui/material';
 import TabMenu from "./../Common/TabMenu/TabMenu";
-
+import { useNavigate } from 'react-router-dom';
 const Create = () => {
     const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+    const navigate = useNavigate()
 
     let FILE = useLocation().state;
 
@@ -19,9 +20,22 @@ const Create = () => {
     const [noteData, setNoteData] = useState({ // test data
         user_id: cookies.token.user_id,
         title: '',
-        content: ''
+        contents: ''
     })
 
+    // 하위 컴포넌트 data setter
+    const [memo, setMemo] = useState('')
+    const [calender, setCalender] = useState({
+        user_id: '',
+        title: '',
+        date: ''
+    })
+    const [todo, setTodo] = useState({
+        user_id: '',
+        todo_title: '',
+        date: ''
+    })
+    
     useEffect(() => {
         createFile(FILE); //회의록 생성
         //console.log("쿠키", cookies.token.user_id);
@@ -71,23 +85,53 @@ const Create = () => {
         setTransformFinishState(true);
         setNoteData({
             ...noteData,
-            content: text
+            contents: text
         })
-        //console.log("text 데이터: ", text);
         return contentText;
     }
-
-    let saveFileData = async () => {
-
-    }
     
+    // noteData change 될 때 마다 set
     let onChangeData = (e) => {
         setNoteData({
             ...noteData,
             [e.target.name] : e.target.value
         })
+        console.log(noteData)
     } 
 
+    // 노트 데이터, 캘린더, 투두 한꺼번에 등록
+    let submitNote = async () => {
+        // 자식 컴포넌트에서 받아온 data log
+        console.log("부모 컴포넌트 메모: ", memo)        
+        console.log("부모 컴포넌트 캘린더: ", calender)        
+        console.log("부모 컴포넌트 할일: ", todo)
+
+        // 3개의 request를 변수에 담아줌
+        const requestOne = axios.post(`${server.url}/record`, noteData);
+        const requestTwo = axios.post(`${server.url}/calender/add_events`, calender);
+        const requestThree = axios.post(`${server.url}/todo`, todo);
+
+        // axios all로 한번에 보내고 결과값 한번에 받음
+        axios.all([requestOne, requestTwo, requestThree]).then(axios.spread((...responses) => {
+            const responseOne = responses[0]
+            const responseTwo = responses[1]
+            const responesThree = responses[2]
+            console.log("노트 결과", responseOne)
+            console.log("캘린더 결과" ,responseTwo)
+            console.log("투두 결과" ,responesThree)
+
+            // 우선 노트 데이터만 잘 등록 됐을 때 페이지 이동하도록 해놓음
+            if(responseOne.data.status) {
+                alert('등록되었습니다.')
+                navigate('/record')
+            }
+            // use/access the results 
+        })).catch(errors => {
+            console.log(errors)
+        })
+    }
+
+    // inline style
     const leftBox = {
         float:'left',
         width: '60%'
@@ -97,13 +141,13 @@ const Create = () => {
         float:'right',
         width: '400px'
     }
+
     const textarea = {
         width: '100%',
-        height: '100vh',
+        height: '50vh',
         border: 'none',
         resize: 'none'
     }
-
     return (
         <>
              {
@@ -111,16 +155,16 @@ const Create = () => {
                     (
                         <>
                             <div style={leftBox}>
-                                <div><input type="text" name="title" /></div>
-                                <textarea value={contentText} name="content" style={textarea}></textarea>
+                                <div><input type="text" name="title" placeholder='제목을 입력하세요.' onChange={onChangeData}/></div>
+                                <textarea defaultValue={contentText} name="contents" style={textarea} onChange={onChangeData}></textarea>
                                 {/* <div style={{ whiteSpace: "pre-wrap" }}>
                                     {contentText}
                                 </div> */}
                             </div>
                             <div style={rightBox}>
-                                <TabMenu noteData={noteData} />
+                                <TabMenu noteData={noteData} setMemo={setMemo} setCalender={setCalender} setTodo={setTodo}/>
                             </div>
-                        
+                            <button onClick={submitNote}>저장</button>
                         </>
                     )
                     : (<CircularProgress />)

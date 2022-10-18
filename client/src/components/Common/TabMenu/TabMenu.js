@@ -40,9 +40,9 @@ const TabSaveBtn = styled.button`
 `;
 
 let Tabmenu = (props) => {
+  //console.log("tabmenu", props.noteData); 
   const [ChangeMenu, setChangeMenu] = useState("");
   let noteData = props.noteData;
-  console.log("tabmenu", props.noteData);
   let changeState = (name) => {
     setChangeMenu(name);
     return;
@@ -83,13 +83,13 @@ let Tabmenu = (props) => {
       </TabMenuBox>
       <TabContentBox>
         {ChangeMenu === "memo" ? (
-          <Memo noteData={props.noteData} />
+          <Memo props={props.noteData} setMemo={props.setMemo} />
         ) : ChangeMenu === "calender" ? (
-          <Calendar />
+          <Calendar setCalender={props.setCalender} />
         ) : ChangeMenu === "todo" ? (
-          <Todo />
+          <Todo setTodo={props.setTodo} />
         ) : (
-          <Memo noteData={noteData} />
+          <Memo noteData={noteData} setMemo={props.setMemo}/>
         )}
       </TabContentBox>
     </TabBox>

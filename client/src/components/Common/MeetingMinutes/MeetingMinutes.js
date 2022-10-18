@@ -9,8 +9,6 @@ import { useLocation } from "react-router-dom";
 
 function MeMi() {
   const sampleLocation = useLocation();
-  console.log(sampleLocation.pathname.replace("record/", ""));
-
   let pathName = sampleLocation.pathname.replace("record/", "");
   return (
     <section className="MMSection">

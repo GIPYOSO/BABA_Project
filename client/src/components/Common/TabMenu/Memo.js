@@ -12,26 +12,26 @@ let Memo = (props) => {
 
   let propsData = props.noteData;
 
-  const [noteData, setNoteData] = useState({
-    user_id: cookies.token.user_id,
-    title: propsData.title,
-    contents: propsData.contents,
-    memo: "",
-  });
+  // const [noteData, setNoteData] = useState({
+  //   user_id: cookies.token.user_id,
+  //   title: propsData.title,
+  //   contents: propsData.contents,
+  //   memo: "",
+  // });
   let onChange = (e) => {
-    setNoteData({
-      ...noteData,
-      memo: e.target.value,
-    });
+    props.setMemo(e.target.value) // props로 받아온 부모 컴포넌트 setter에 메모가 바뀔 때 마다 data를 저장해줌
+    // setNoteData({
+    //   ...noteData,
+    //   memo: e.target.value,
+    // });
   };
 
   let submitBtn = async (e) => {
-
-    await axios
-      .post(`${server.url}/record`, noteData)
-      .then((res) => console.log("등록성공", res));
+    
+    // await axios
+    //   .post(`${server.url}/record`, noteData)
+    //   .then((res) => console.log("등록성공", res));
   };
-
 
   useEffect(() => {
     // console.log(memotext);

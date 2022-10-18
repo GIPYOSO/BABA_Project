@@ -11,13 +11,13 @@ import TodoCreate from './TodoCreate';
 //   }
 // `;
 
-function App() {
+function App(props) {
   return (
     <>
       {/* <GlobalStyle /> */}
       <TodoTemplate>
         <TodoHead />
-        <TodoList />
+        <TodoList setTodo={props.setTodo}/>
         <TodoCreate />
       </TodoTemplate>
     </>
