@@ -61,39 +61,8 @@ const Detail = () => {
       })
     }
 
-    // vito 토큰 발급
-    let getVitoToken = async () => {
-        return await axios.get(`${server.url}/record/vito/token`)
-                    .then(res => {
-                        return res.data.tokenData.access_token
-                    })
-                    .catch(e => {
-                        console.log(e)
-                    })
-    }
-
-    // 파일 선택 시 전사결과 get
-    let handleChangeFile = async (event) => {
-      let formData = new FormData()
-
-      let TOKEN = await getVitoToken()
-      let FILE = event.target.files[0]
-      
-      formData.append('file', FILE)
-      formData.append('token', TOKEN)
-
-      await axios({
-        method:'post',
-        url:`${server.url}/record/vito/getResult`, 
-        data: formData
-      })
-        .then(res => console.log(res))
-        .catch(e => console.log(e))
-    }
-
     return (
         <div>
-             <input type="file" id="file"  onChange={handleChangeFile} multiple="multiple" />
         </div>
     );
 };
