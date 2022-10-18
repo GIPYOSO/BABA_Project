@@ -1,29 +1,14 @@
-import React from "react";
+let Calendar = () => {
 
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
-import events from "events";
-
-export default function Calendar() {
-    const events = [{ title: "today's event", date: new Date() }];
-
-  return (
-    <div className="App" >
-      <FullCalendar id='calendar'
-        defaultView="dayGridMonth"
-        header={{
-          left: "prev,next",
-          center: "title",
-          right: "dayGridMonth,timeGridWeek,timeGridDay"
-        }}
-        plugins={[dayGridPlugin, timeGridPlugin]}
-        events={events}
-      />
-    </div>
-  );
-
-  
+    return(
+        <>
+        <div>
+            <p>캘린더</p>
+        </div>
+        </>
+    )
 }
+
+export default Calendar
 
 // axios.post("http://localhost:8080/record")
