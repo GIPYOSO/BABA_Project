@@ -1,59 +1,54 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
-import server from "./../../../config/server.json"
+import server from "./../../../config/server.json";
 
 const TabSaveBtn = styled.button`
-    width: 80px;
+  width: 80px;
 `;
 
-
 let Memo = (props) => {
+  const [memotext, setText] = useState("");
 
-    const [memotext, setText] = useState({
-        text:""
-    });
+  let onChange = (e) => {
+    setText(e.target.value);
+  };
 
+  let textSubmitBtn = (e) => {
 
-    let memoData = (e) => {
-        setText({
-            ...memotext,
-            [e.target.name] : e.target.value
-        })
-    }
+    setText(e.target.value);
 
-    let textSubmitBtn = () => {
-
-        memoData();
-        // if(memotext.content === ""){
-        //     return
-        // }
-
-        // return await axios.post(server.url + "/", memotext);
-    }
-
-
-    useEffect (() => {
+    if (memotext === '') {
+        alert("메모를 입력해 주세요");
+    } else {
         console.log(memotext);
+        
+    }
 
-    } , [])
-    
-    
-    return(
-        <>
-            <form id="note" className="note tabPg active">
-                <p>메모</p>
-                <p>
-                  <input type="text" onClick={textSubmitBtn} name="text" id="text"></input>
-                </p>
-            </form>
+  };
+
+  let onReset = () => {
+    setText("");
+  };
 
 
-            <TabSaveBtn onClick={textSubmitBtn}>
-                저장
-            </TabSaveBtn>
-        </>
-    )
-}
+  useEffect(() => {
+    console.log(memotext);
+  }, []);
 
-export default Memo
+  return (
+    <>
+      <form id="note" className="note tabPg active">
+        <p>메모</p>
+        <p>
+          <input onChange={onChange} value={memotext}></input>
+        </p>
+      </form>
+
+      <TabSaveBtn onClick={textSubmitBtn}>저장</TabSaveBtn>
+      <div>{memotext}</div>
+    </>
+  );
+};
+
+export default Memo;
