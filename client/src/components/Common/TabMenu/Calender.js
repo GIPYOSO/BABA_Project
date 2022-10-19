@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
-// import events from "events";
+import googleCalendarPlugin from '@fullcalendar/google-calendar';
+
 
 import { useCookies } from 'react-cookie'
 
-let Calendar = (props) => {
+
+  export default function Calendar(props) {
     const [cookies, setCookie, removeCookie] = useCookies(['token'])
     const [calender, setCalender] = useState({
         user_id: cookies.token.user_id,
@@ -19,22 +20,24 @@ let Calendar = (props) => {
         props.setCalender(calender) // props로 받아온 부모 컴포넌트 setter에 data를 저장해줌
     }, [])
 
-    const events = [{ title: "today's event", date: new Date() }];
-
-    return (
-      <div className="App" >
-        <FullCalendar id='calendar'
-          defaultView="dayGridMonth"
-          header={{
-            left: "prev,next",
-            center: "title",
-            right: "dayGridMonth,timeGridWeek,timeGridDay"
-          }}
-          plugins={[dayGridPlugin, timeGridPlugin]}
-          events={events}
-        />
-      </div>
-    );
-  }
-
-  export default Calendar;
+    // Apikey는 환경 변수를 이용해 숨겼다
+      const apiKey = process.env.REACT_APP_CAL_API_KEY;
+    
+      return (
+        <div className="cal-container">
+          <FullCalendar
+            plugins={[dayGridPlugin, googleCalendarPlugin]}
+            initialView="dayGridMonth"
+            googleCalendarApiKey={apiKey}
+            events={{
+              googleCalendarId: 'eunbeann@gmail.com',
+            }}
+            eventDisplay={'block'}
+            eventTextColor={'#FFF'}
+            eventColor={'#F2921D'}
+            height={'660px'}
+            Toolbar
+          />
+        </div>
+      );
+    }

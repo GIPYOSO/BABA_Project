@@ -3,6 +3,7 @@ import styled from "styled-components";
 import axios from "axios";
 import server from "./../../../config/server.json";
 import { useCookies } from "react-cookie";
+import MemoBoard from "./MemoBoard";
 
 const TabSaveBtn = styled.button`
   width: 80px;
@@ -48,6 +49,7 @@ let Memo = (props) => {
 
       <TabSaveBtn onClick={submitBtn}>저장</TabSaveBtn>
       {/* <div>{memotext}</div> */}
+      <MemoBoard/>
     </>
   );
 };
