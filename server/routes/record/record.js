@@ -62,9 +62,7 @@ router.get("/:user_id", async (req, res, next) => {
 
   let totalPage = Math.ceil(total / perPage);
 
-  console.log(note);
-
-
+  // console.log(note);
 
   res.json({ note, totalPage });
 });
@@ -74,12 +72,12 @@ router.get("/:user_id", async (req, res, next) => {
 router.post("/:user_id/update", async (req, res, next) => {
   console.log(req);
 
-  let { user_id } = req.params; // 이부분 수정해야 함 => user_id 는 노트 삭제할 때 사용하면 안됨
-  let { title, contents, file_url, memo, favorites } = req.body;
+  // let { user_id } = req.params; // 이부분 수정해야 함 => user_id 는 노트 삭제할 때 사용하면 안됨
+  let { id, title, contents, file_url, memo, favorites } = req.body;
 
   try {
     await Note.updateOne(
-      { user_id },
+      { _id: id },
       {
         title,
         contents,
@@ -91,14 +89,14 @@ router.post("/:user_id/update", async (req, res, next) => {
 
     res.json({
       status: true,
-      message: "일기장을 수정했습니다.",
+      message: "노트가 수정 되었습니다.",
     });
   } catch (e) {
     next(e);
   }
 });
 
-//내 노트 삭제
+// 내 노트 삭제
 //http://localhost:8080/record/user_id/delete
 router.post("/:shortId/delete", async (req, res, next) => {
   let { user_id } = req.params;
@@ -108,7 +106,7 @@ router.post("/:shortId/delete", async (req, res, next) => {
 
     res.json({
       status: true,
-      message: "일기장을 삭제하였습니다.",
+      message: "노트가 삭제 되었습니다.",
     });
   } catch (e) {
     next(e);
