@@ -10,16 +10,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from 'react-router-dom'
 
 let SignUp = () => {
-  const [cookies, setCookie, reamoveCookie] = useCookies(["token"]);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    console.log("cookie", cookies);
-    if (cookies.token === undefined) {
-      alert("로그인이 필요합니다.");
-      navigate("../login");
-    }
-  }, []);
 
   const [userData, setUserData] = useState({
     user_id: '',

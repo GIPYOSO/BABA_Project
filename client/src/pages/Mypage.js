@@ -11,6 +11,9 @@ import IconButton from "@mui/material/IconButton";
 import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import UBox from "../components/Mypage/UBox";
 import SBox from "../components/Mypage/SBox";
+import { useEffect } from "react";
+import { useCookies } from "react-cookie";
+import { useNavigate } from 'react-router-dom'
 
 const Divstyle1 = styled.div`
   width: 1520px;
@@ -84,8 +87,19 @@ let pageLoad = () => {
 };
 
 let Mypage = () => {
-  const [change, setChange] = useState("");
+  const [cookies, setCookie, reamoveCookie] = useCookies(["token"]);
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    console.log("cookie", cookies);
+    if (cookies.token === undefined) {
+      alert("로그인이 필요합니다.");
+      navigate("../login");
+    }
+  }, []);
+
+  const [change, setChange] = useState("");
+  
   let changeState = (name) => {
     console.log(name);
     setChange(name);
