@@ -6,6 +6,7 @@ import FileUpload from "./../../Record/FileUpload";
 import TabMenu from "../TabMenu/TabMenu";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import NavVar from "../Nav/NavVar";
 
 function MeMi() {
   const sampleLocation = useLocation();
@@ -13,7 +14,7 @@ function MeMi() {
   return (
     <section className="MMSection">
       <h2>회의록</h2>
-      <div className="navBox">navVar가 올 장소</div>
+      <div className="navBox"><NavVar></NavVar></div>
       <div className="titleBox">
         <title>title1</title>
       </div>

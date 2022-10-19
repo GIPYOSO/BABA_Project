@@ -11,9 +11,16 @@ import IconButton from "@mui/material/IconButton";
 import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import UBox from "../components/Mypage/UBox";
 import SBox from "../components/Mypage/SBox";
+<<<<<<< Updated upstream
 import { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from 'react-router-dom'
+=======
+import Aside from "./../components/Common/Aside/aside";
+import Nabvar from "./../components/Common/Nav/NavVar"
+import axios from "axios";
+import { useCookies } from "react-cookie";
+>>>>>>> Stashed changes
 
 const Divstyle1 = styled.div`
   width: 1520px;
@@ -55,6 +62,11 @@ const DivStyle4 = styled.div`
   display: inline-block;
 `;
 
+const NavStyle = styled.div`
+width: 78.5%;
+float : right;
+`
+
 const TextStyle = styled.h1`
   font-size: 36px;
   color: #504d4d;
@@ -78,8 +90,8 @@ const BtnStyle = styled.button`
 
 // });
 
-let ppp = () => {
-  console.log("dk");
+let ppp = async() => {
+  return await axios.post("http://localhost:8080/user/mypage", )
 };
 
 let pageLoad = () => {
@@ -87,8 +99,19 @@ let pageLoad = () => {
 };
 
 let Mypage = () => {
+<<<<<<< Updated upstream
   const [cookies, setCookie, reamoveCookie] = useCookies(["token"]);
   const navigate = useNavigate();
+=======
+  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+  const [change, setChange] = useState("");
+  const [userData , setUserData] = useState({
+    user_id : cookies.token.user_id,
+    name : cookies.token.name,
+    password : "",
+    nickName : "",
+  })
+>>>>>>> Stashed changes
 
   useEffect(() => {
     console.log("cookie", cookies);
@@ -102,6 +125,7 @@ let Mypage = () => {
   
   let changeState = (name) => {
     console.log(name);
+    console.log(cookies);
     setChange(name);
     return;
   };
@@ -115,64 +139,77 @@ let Mypage = () => {
   };
 
   return (
-    <Divstyle1>
-      <TextStyle>마이페이지</TextStyle>
-      <Divstyle2>
-        <hr
-          style={{
-            background: "#D9D9D9",
-            height: 1.05,
-            border: 0,
-            marginBottom: 20,
-          }}
-        />
+    <>
+      <Aside></Aside>
+      <NavStyle>
+        <Nabvar></Nabvar>
+      </NavStyle>
+      <Divstyle1>
+        <TextStyle>마이페이지</TextStyle>
+        <Divstyle2>
+          <hr
+            style={{
+              background: "#D9D9D9",
+              height: 1.05,
+              border: 0,
+              marginBottom: 20,
+            }}
+          />
 
-        <div style={{ width: 450, height: 250, margin: 10, border: "solid" }}>
-          photo
-        </div>
-        <IconButton
-          color="primary"
-          aria-label="upload picture"
-          component="label"
-        >
-          <input hidden accept="image/*" type="file" />
-          <PhotoCamera />
-        </IconButton>
-      </Divstyle2>
-      <Divstyle3>
-        <BtnStyle
-          onClick={() => {
-            changeState("user");
-          }}
-        >
-          {" "}
-          회원관리 및 수정
-        </BtnStyle>
-        <BtnStyle
-          onClick={() => {
-            changeState("bookmark");
-          }}
-        >
-          {" "}
-          북마크
-        </BtnStyle>
-        <BtnStyle
-          onClick={() => {
-            changeState("secession");
-          }}
-        >
-          {" "}
-          회원탈퇴{" "}
-        </BtnStyle>
-      </Divstyle3>
-      <DivStyle4>
-        <div style={{ margin: "30px" }}>
-          { change === "user" ? <UBox /> 
-          : change === "bookmark" ? <p>아직 안만든 북마크</p> 
-          : change === "secession" ? <SBox /> : <UBox />}
-        </div>
-      </DivStyle4>
-    </Divstyle1>
+          <div style={{ width: 450, height: 250, margin: 10, border: "solid" }}>
+            photo
+          </div>
+          <IconButton
+            color="primary"
+            aria-label="upload picture"
+            component="label"
+          >
+            <input hidden accept="image/*" type="file" />
+            <PhotoCamera />
+          </IconButton>
+        </Divstyle2>
+        <Divstyle3>
+          <BtnStyle
+            onClick={() => {
+              changeState("user");
+            }}
+          >
+            {" "}
+            회원관리 및 수정
+          </BtnStyle>
+          <BtnStyle
+            onClick={() => {
+              changeState("bookmark");
+            }}
+            
+          >
+            {" "}
+            북마크
+          </BtnStyle>
+          <BtnStyle
+            onClick={() => {
+              changeState("secession");
+            }}
+          >
+            {" "}
+            회원탈퇴{" "}
+          </BtnStyle>
+        </Divstyle3>
+        <DivStyle4>
+          <div style={{ margin: "30px" }}>
+            {change === "user" ? (
+              <UBox userData={userData}/>
+            ) : change === "bookmark" ? (
+              <p>아직 안만든 북마크</p>
+            ) : change === "secession" ? (
+              <SBox />
+            ) : (
+              <UBox userData={userData} />
+            )}
+          </div>
+        </DivStyle4>
+      </Divstyle1>
+    </>
   );
 };
 export default Mypage;

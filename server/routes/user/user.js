@@ -7,16 +7,14 @@ const jwt = require("jsonwebtoken");
 const jwtConfig = require("../../config/jwtConfig");
 const router = Router();
 
+//localhost:8080/user/mypage
+http: router.post("/myPage", async (req, res, next) => {
+  console.log(req.body);
+  let { user_id } = req.body;
+  let checkEmail = await User.findOne({ user_id });
 
-//http://localhost:8080/user/mypage
-// router.post("/myPage", async (req, res, next) => {
-//   console.log(req.body);
-//   let { user_id } = req.body;
-//   let checkEmail = await User.findOne({ user_id });
-
-//   res.json({ user_id, password, name, profile_nick })
-// });
-
+  res.json({ user_id, password, name, profile_nick });
+});
 
 //http://localhost:8080/user/signUp
 router.post("/signUp", async (req, res, next) => {
@@ -48,7 +46,6 @@ router.post("/signUp", async (req, res, next) => {
     message: "회원가입이 완료되었습니다.",
   });
 });
-
 
 //http://localhost:8080/user/login
 router.post("/login", async (req, res, next) => {
@@ -100,6 +97,21 @@ router.post("/login", async (req, res, next) => {
       }
     }
   );
+});
+
+router.post("/delete", async (req, res, next) => {
+  let { user_id } = req.body;
+  try {
+    //shortId에 해당하는 유저를 삭제함
+    await User.deleteMany({ user_id });
+
+    res.json({
+      status: true,
+      message: "회원을 삭제하였습니다.",
+    });
+  } catch (e) {
+    next(e);
+  }
 });
 
 const passwordHash = (password) => {

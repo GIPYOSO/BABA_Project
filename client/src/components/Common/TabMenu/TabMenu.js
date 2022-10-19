@@ -6,7 +6,12 @@ import axios from "axios";
 import styled from "styled-components";
 import Memo from "./Memo";
 import Calendar from "./Calender";
+<<<<<<< Updated upstream
 import TodoList from "./Todo";
+=======
+// import TodoTotal from "./todo-list/TodoTotal";
+// import Todo from "./todo-list/TodoTotal";
+>>>>>>> Stashed changes
 // import FullCalendar from "@fullcalendar/react";
 // import dayGridPlugin from "@fullcalendar/daygrid";
 // import $ from "jquery";
@@ -87,7 +92,12 @@ let Tabmenu = (props) => {
         ) : ChangeMenu === "calender" ? (
           <Calendar setCalender={props.setCalender} />
         ) : ChangeMenu === "todo" ? (
+<<<<<<< Updated upstream
           <TodoList setTodo={props.setTodo} />
+=======
+          <></>
+          // <TodoTotal setTodo={props.setTodo} />
+>>>>>>> Stashed changes
         ) : (
           <Memo noteData={noteData} setMemo={props.setMemo}/>
         )}

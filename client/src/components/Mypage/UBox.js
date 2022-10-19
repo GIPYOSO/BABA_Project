@@ -2,17 +2,16 @@ import styled from "styled-components";
 import FormInput from "../Common/Input/FormInput";
 import SubmitBtn from "../Common/Button/SubmitBtn";
 
-
 const TextStyle = styled.h1`
-font-size: 36px;
-color: #504d4d;
+  font-size: 36px;
+  color: #504d4d;
 `;
 
-let UBox = () => {
-    
+let UBox = (props) => {
+  console.log(props.userData);
 
-    return(
-      <>
+  return (
+    <>
       <TextStyle> 회원관리 및 수정 </TextStyle>
 
       <hr
@@ -26,13 +25,13 @@ let UBox = () => {
       <FormInput
         id={"email"}
         label={"Email"}
-        defaultValue={"bada@gmail.com"}
+        defaultValue={props.userData.user_id}
         InputProps={{ readOnly: true }}
       />
       <FormInput
         id={"name"}
         label={"Name"}
-        defaultValue={"바다"}
+        defaultValue={props.userData.name}
         InputProps={{ readOnly: true }}
       />
       <FormInput
@@ -45,14 +44,13 @@ let UBox = () => {
       <FormInput
         id={"nickName"}
         label={"Nickname"}
-        defaultValue={"바다"}
+        defaultValue={props.userData.nickName}
         InputProps={{ readOnly: true }}
       />
       <div style={{ textAlign: "right" }}>
         <SubmitBtn label={"수정"} />
       </div>
     </>
-    )
-
-}
-export default UBox
+  );
+};
+export default UBox;
