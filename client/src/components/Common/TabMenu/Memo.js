@@ -11,31 +11,23 @@ const TabSaveBtn = styled.button`
 let Memo = (props) => {
   const [cookies, setCookie, removeCooke] = useCookies(["token"]);
 
-  let propsData = props.noteData;
+  // memo의 defaultValue를 위한 변수
+  let memo = props.noteData.memo;
 
-  // const [noteData, setNoteData] = useState({
-  //   user_id: cookies.token.user_id,
-  //   title: propsData.title,
-  //   contents: propsData.contents,
-  //   memo: "",
-  // });
   let onChange = (e) => {
-    props.setMemo(e.target.value) // props로 받아온 부모 컴포넌트 setter에 메모가 바뀔 때 마다 data를 저장해줌
-    // setNoteData({
-    //   ...noteData,
-    //   memo: e.target.value,
-    // });
-  };
+    // tabMemu 이동 시 데이터 삭제되는 문제 때문에 setter 추가
+    props.setTabMemo(e.target.value) 
 
-  let submitBtn = async (e) => {
-    
-    // await axios
-    //   .post(`${server.url}/record`, noteData)
-    //   .then((res) => console.log("등록성공", res));
+    // 실제 noteData set
+    props.setNoteData({
+      ...props.noteData,
+      memo: e.target.value
+    })
+
   };
 
   useEffect(() => {
-    // console.log(memotext);
+    
   }, []);
 
   return (
@@ -43,12 +35,9 @@ let Memo = (props) => {
       <form id="note" className="note tabPg active">
         <p>메모</p>
         <p>
-          <input onChange={onChange}></input>
+          <input onChange={onChange} defaultValue={memo}></input>
         </p>
       </form>
-
-      <TabSaveBtn onClick={submitBtn}>저장</TabSaveBtn>
-      {/* <div>{memotext}</div> */}
       <MemoBoard/>
     </>
   );

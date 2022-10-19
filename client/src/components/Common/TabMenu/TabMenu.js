@@ -6,12 +6,7 @@ import axios from "axios";
 import styled from "styled-components";
 import Memo from "./Memo";
 import Calendar from "./Calender";
-<<<<<<< Updated upstream
 import TodoList from "./Todo";
-=======
-// import TodoTotal from "./todo-list/TodoTotal";
-// import Todo from "./todo-list/TodoTotal";
->>>>>>> Stashed changes
 // import FullCalendar from "@fullcalendar/react";
 // import dayGridPlugin from "@fullcalendar/daygrid";
 // import $ from "jquery";
@@ -46,10 +41,19 @@ const TabSaveBtn = styled.button`
 
 let Tabmenu = (props) => {
   //console.log("tabmenu", props.noteData); 
-  const [ChangeMenu, setChangeMenu] = useState("");
+  
   let noteData = props.noteData;
+
+  const [ChangeMenu, setChangeMenu] = useState("");
+  
+  const [tabMemo, setTabMemo] = useState('')
+
   let changeState = (name) => {
     setChangeMenu(name);
+    props.setNoteData({
+      ...props.noteData,
+      memo: tabMemo
+    })
     return;
   };
 
@@ -60,7 +64,7 @@ let Tabmenu = (props) => {
         return <Memo />;
     }
   };
-
+  
   return (
     <TabBox>
       <TabMenuBox>
@@ -88,18 +92,13 @@ let Tabmenu = (props) => {
       </TabMenuBox>
       <TabContentBox>
         {ChangeMenu === "memo" ? (
-          <Memo props={props.noteData} setMemo={props.setMemo} />
+          <Memo noteData={props.noteData} setNoteData={props.setNoteData} setMemo={props.setMemo} setTabMemo={setTabMemo}/>
         ) : ChangeMenu === "calender" ? (
           <Calendar setCalender={props.setCalender} />
         ) : ChangeMenu === "todo" ? (
-<<<<<<< Updated upstream
           <TodoList setTodo={props.setTodo} />
-=======
-          <></>
-          // <TodoTotal setTodo={props.setTodo} />
->>>>>>> Stashed changes
         ) : (
-          <Memo noteData={noteData} setMemo={props.setMemo}/>
+          <Memo noteData={props.noteData} setNoteData={props.setNoteData} setMemo={props.setMemo} setTabMemo={setTabMemo}/>
         )}
       </TabContentBox>
     </TabBox>

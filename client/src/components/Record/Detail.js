@@ -8,22 +8,28 @@ import { jsPDF } from "jspdf";
 import _fonts from "../../assets/fonts/gulim";
 import moment from "moment";
 import NoticeWriteComponent from './NoticeWriteComponent';
+import TabMenu from "./../Common/TabMenu/TabMenu";
 
 const Detail = () => {
   // console.log(useLocation().state) // list에서 받아 온 detail data 
 
-  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+    const [cookies, setCookie, removeCookie] = useCookies(["token"]);
 
-  const [noteData, setNoteData] = useState(useLocation().state);
+    // 하위 컴포넌트 data setter
+    const [memo, setMemo] = useState('')
+    const [calender, setCalender] = useState({
+        user_id: '',
+        title: '',
+        date: ''
+    })
+    const [todo, setTodo] = useState({
+        user_id: '',
+        todo_title: '',
+        date: ''
+    })
 
-  const [newData, setNewData] = useState({
-    user_id: cookies.token.user_id,
-    title: "수정1",
-    contents: "수정했습니다",
-    file_url: "",
-    memo: "수정한 메모에요",
-    favorites: "",
-  });
+    // list에서 onclick으로 전달해준 state를 상세 데이터로 셋팅
+    const [noteData, setNoteData] = useState(useLocation().state);
 
   // useEffect(() => {
   //   console.log();
@@ -39,25 +45,15 @@ const Detail = () => {
   //   });
   // }, noteData);
 
-
-  //노트 데이터를 요청하는 함수
-  let getNoteData = async () => {
-    return await axios.post("http://localhost:8080/record", noteData, {
-      header: {
-        accessToken: cookies.token.accessToken,
-      },
-    });
-  };
-
   let updateNoteData = async () => {
-    return await // http://localhost:8080/record/user_id/update
-      axios.post(`http://localhost:8080/record/${newData.user_id}/update`,
-        newData, {
-        headers: {
-          accessToken: cookies.token.accessToken
-        }
-
-      })
+    console.log(noteData)
+    // return await // http://localhost:8080/record/user_id/update
+    //   axios.post(`http://localhost:8080/record/${noteData.user_id}/update`, noteData)
+    //       .then(res => {
+    //         console.log(res)
+    //       }).catch(e => {
+    //         console.log(e)
+    //       })
   }
 
   let downloadBtn = (noteData) => {
@@ -75,16 +71,33 @@ const Detail = () => {
     doc.save(`${moment(noteData.createdAt).format("YYYY-MM-DD")}_${noteData.title}.pdf`);  //결과 출력
   }
 
+  // inline style
+  const leftBox = {
+      float:'left',
+      width: '60%'
+  }
+
+  const rightBox = {
+      float:'right',
+      width: '400px'
+  }
+
   return (
-    <div>
+    <div class="wrap">
       <input type="text" name="title" defaultValue={noteData.title} />
       <p>생성 날짜: {moment(noteData.createdAt).format("YYYY-MM-DD HH:mm:ss")}</p>
       <p>수정 날짜: {moment(noteData.updatedAt).format("YYYY-MM-DD HH:mm:ss")}</p>
-      <NoticeWriteComponent value={noteData} setNoteData={setNoteData}/>
+      <div style={leftBox}>
+        <NoticeWriteComponent value={noteData} setNoteData={setNoteData}/>
+      </div>
+      <div style={rightBox}>
+          <TabMenu noteData={noteData} setNoteData={setNoteData} setMemo={setMemo} setCalender={setCalender} setTodo={setTodo}/>
+      </div>
       {/* <textarea name="contents" defaultValue={noteData.contents} /> */}
       <button name="download" onClick={() => {
         downloadBtn(noteData);
       }}>PDF 다운로드</button>
+      <button onClick={updateNoteData}>저장</button>
     </div>
   );
 };

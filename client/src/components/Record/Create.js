@@ -7,6 +7,7 @@ import { useCookies } from "react-cookie";
 import {CircularProgress} from '@mui/material';
 import TabMenu from "./../Common/TabMenu/TabMenu";
 import { useNavigate } from 'react-router-dom';
+
 const Create = () => {
     const [cookies, setCookie, removeCookie] = useCookies(["token"]);
     const navigate = useNavigate()
@@ -162,7 +163,7 @@ const Create = () => {
                                 </div> */}
                             </div>
                             <div style={rightBox}>
-                                <TabMenu noteData={noteData} setMemo={setMemo} setCalender={setCalender} setTodo={setTodo}/>
+                                <TabMenu noteData={noteData} setNoteData={setNoteData} setMemo={setMemo} setCalender={setCalender} setTodo={setTodo}/>
                             </div>
                             <button onClick={submitNote}>저장</button>
                         </>
