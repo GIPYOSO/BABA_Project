@@ -14,9 +14,22 @@ import { useNavigate } from 'react-router-dom';
 
 function AsideList(){
     const navigate = useNavigate()
+
+    // 새 템플릿 추가
     let clickNewTemplate = () => {
         navigate('/record/fileUpload')
     }
+
+    // home
+    let clickHome = () => {
+        navigate('/')
+    }
+
+    // 전체 노트
+    let clickAllNote = () => {
+        navigate('/record')
+    }
+
     return( 
         <section className="asideSection">
             <aside>
@@ -26,12 +39,12 @@ function AsideList(){
                 
                 <ul>
                     <li onClick={clickNewTemplate}><img src={Plus}/>새 템플릿 추가</li>
-                    <li><img src={Home} />Home</li>
+                    <li onClick={clickHome}><img src={Home} />Home</li>
                 </ul>
                 <span>내 노트</span>
                 
                 <ul>
-                    <li><img src={Playlist} />전체 노트</li>
+                    <li onClick={clickAllNote}><img src={Playlist} />전체 노트</li>
                     <li><img src={Recent} />최근 노트</li>
                     <li><img src={Star} />즐겨찾는 노트</li>
                 </ul>
