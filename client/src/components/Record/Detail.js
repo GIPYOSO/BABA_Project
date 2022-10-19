@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 import { jsPDF } from "jspdf";
 import _fonts from "../../assets/fonts/gulim";
 import moment from "moment";
+import NoticeWriteComponent from './NoticeWriteComponent';
 
 const Detail = () => {
   // console.log(useLocation().state) // list에서 받아 온 detail data 
@@ -24,19 +25,19 @@ const Detail = () => {
     favorites: "",
   });
 
-  useEffect(() => {
-    console.log();
-    // getNoteData()
+  // useEffect(() => {
+  //   console.log();
+  //   getNoteData()
 
-    // updateNoteData()
-    // .then((res) => {
-    //   console.log('응답코드입니다', res);
-    //   setNoteData(res.data.user);
-    // })
-    // .catch((err) => {
-    //   console.log(err);
-    // });
-  }, []);
+  //   updateNoteData()
+  //   .then((res) => {
+  //     console.log('응답코드입니다', res);
+  //     setNoteData(res.data.user);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
+  // }, noteData);
 
 
   //노트 데이터를 요청하는 함수
@@ -60,6 +61,7 @@ const Detail = () => {
   }
 
   let downloadBtn = (noteData) => {
+    //console.log("노트데이터", noteData);
     var doc = new jsPDF("p", "mm", "a4");
 
     doc.addFileToVFS('malgun.ttf', _fonts.font);  //_fonts 변수는 Base64 형태로 변환된 내용입니다.
@@ -73,14 +75,13 @@ const Detail = () => {
     doc.save(`${moment(noteData.createdAt).format("YYYY-MM-DD")}_${noteData.title}.pdf`);  //결과 출력
   }
 
-  console.log("노트데이터", noteData);
-
   return (
     <div>
       <input type="text" name="title" defaultValue={noteData.title} />
       <p>생성 날짜: {moment(noteData.createdAt).format("YYYY-MM-DD HH:mm:ss")}</p>
       <p>수정 날짜: {moment(noteData.updatedAt).format("YYYY-MM-DD HH:mm:ss")}</p>
-      <textarea name="contents" defaultValue={noteData.contents} />
+      <NoticeWriteComponent value={noteData} setNoteData={setNoteData}/>
+      {/* <textarea name="contents" defaultValue={noteData.contents} /> */}
       <button name="download" onClick={() => {
         downloadBtn(noteData);
       }}>PDF 다운로드</button>
