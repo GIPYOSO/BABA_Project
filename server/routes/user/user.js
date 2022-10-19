@@ -77,6 +77,7 @@ router.post("/login", async (req, res, next) => {
     {
       user_id: checkEmail.user_id,
       name: checkEmail.name,
+      profile_nick: checkEmail.profile_nick
     },
     jwtConfig.secret,
     {
@@ -94,6 +95,7 @@ router.post("/login", async (req, res, next) => {
           aceessToken: token,
           user_id: checkEmail.user_id,
           name: checkEmail.name,
+          profile_nick: checkEmail.profile_nick
         });
       }
     }
