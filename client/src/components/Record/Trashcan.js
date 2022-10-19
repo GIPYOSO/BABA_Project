@@ -8,18 +8,17 @@ import { useState } from 'react';
 import moment from 'moment'
 import { useNavigate } from 'react-router-dom';
 
-const List = () => {
+const Trashcan = () => {
     const [cookies, setCookie, removeCookie] = useCookies(["token"]);
     const navigate = useNavigate();
     const [noteData, setNoteData] = useState([])
     const [page, setPage] = useState(1);
     const [checkedInputs, setCheckedInputs] = useState([]);
 
-
     useEffect(() => {
         //노트 데이터를 요청하는 함수
-        let getNoteData = async () => {
-            return await axios.get(`${server.url}/record/${cookies.token.user_id}`)
+        let getDeleteNoteData = async () => {
+            return await axios.get(`${server.url}/record/trashcan/${cookies.token.user_id}`)
                 .then(res => {
                     let response = res.data
                     setNoteData(response)
@@ -27,7 +26,7 @@ const List = () => {
                     console.log(e)
                 })
         }
-        getNoteData()
+        getDeleteNoteData()
     }, [])
 
     //체크박스 이벤트 핸들러
@@ -38,7 +37,7 @@ const List = () => {
             // 체크 해제
             setCheckedInputs(checkedInputs.filter((el) => el !== id));
         }
-        console.log("선택 데이터:" , checkedInputs);
+        //console.log("선택 데이터:" , checkedInputs);
     };
 
     const gotoDetail = (data) => {
@@ -61,17 +60,18 @@ const List = () => {
         // getNoteData()
     }
 
-    //노트 데이터 삭제(휴지통으로 이동)
-    let deleteNoteBtn = async () => {
+    //노트 데이터 복구하기
+    let restoreNoteBtn = async () => {
         console.log(checkedInputs);
-        return await axios.post(server.url + '/record/delete', checkedInputs);
+        return await axios.post(server.url + '/record/restore', checkedInputs);
     }
+
 
     return (
         <div className="list">
-            <h3>전체 노트</h3>
+            <h3>휴지통</h3>
             <button onClick={() => {
-                            deleteNoteBtn().then(res => {
+                            restoreNoteBtn().then(res => {
                                 console.log(res);
                                 if(res.data.status) {
                                     alert(res.data.message);
@@ -80,7 +80,8 @@ const List = () => {
                             }).catch(err => {
                                 console.log(err)
                             })
-                        }}>삭제</button>
+                        }}>복구</button>
+            <h5>삭제된 노트는 30일까지 보관됩니다.</h5>
             {noteData.length === 0 ?
                 (<table>
                     <colgroup>
@@ -115,10 +116,10 @@ const List = () => {
                                 {
                                     noteData.note.map((data, i) => (
                                         <tr key={i}>
-                                            <td><input type="checkbox" checked={checkedInputs.includes(data._id) ? true : false}
-                                                onChange={(e) => {
-                                                    changeHandler(e.target.checked, data._id)
-                                                }} /></td>
+                                            <td><input type="checkbox" checked={checkedInputs.includes(data._id) ? true : false} 
+                                            onChange={(e) => {
+                                                changeHandler(e.target.checked, data._id)
+                                            }} /></td>
                                             <td onClick={() => gotoDetail(data)}>{data.title}</td>
                                             <td>{moment(data.updatedAt).format('YYYY-MM-DD')}</td>
                                         </tr>
@@ -126,7 +127,6 @@ const List = () => {
                                 }
                             </tbody>
                         </table>
-
                         <div className="pagingWrap">
                             <Pagination count={noteData.totalPage} page={page} onChange={onChangePagenation} />
                         </div>
@@ -136,4 +136,4 @@ const List = () => {
     );
 };
 
-export default List;
+export default Trashcan;

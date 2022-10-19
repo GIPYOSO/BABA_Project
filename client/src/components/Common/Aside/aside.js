@@ -30,6 +30,11 @@ function AsideList(){
         navigate('/record')
     }
 
+    // 휴지통
+    let clickTrashcanNote = () => {
+        navigate('/record/trashcan')
+    }
+
     return( 
         <section className="asideSection">
             <aside>
@@ -58,7 +63,7 @@ function AsideList(){
                 </ul>
                 <span></span>
                 <ul>
-                    <li><img src={Trash} />휴지통</li>
+                    <li onClick={clickTrashcanNote}><img src={Trash} />휴지통</li>
                 </ul>
             </aside>
         </section>

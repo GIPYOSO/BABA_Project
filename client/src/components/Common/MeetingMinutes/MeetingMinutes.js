@@ -7,6 +7,7 @@ import TabMenu from "../TabMenu/TabMenu";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import NavVar from "../Nav/NavVar";
+import Trashcan from "../../Record/Trashcan";
 
 function MeMi() {
   const sampleLocation = useLocation();
@@ -26,6 +27,8 @@ function MeMi() {
             return <Create />;
           } else if (pathName === "/detail") {
             return <Detail />;
+          } else if (pathName === "/trashcan"){
+            return <Trashcan />;
           }
           {
             return <List />;

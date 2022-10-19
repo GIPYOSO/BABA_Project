@@ -20,7 +20,7 @@ router.post("/", async (req, res, next) => {
       file_url,
       memo,
       favorites,
-
+      use_at: true,
       // author: authData
     });
     res.json({
@@ -34,7 +34,7 @@ router.post("/", async (req, res, next) => {
 
 // 내 노트 조회
 router.get("/:user_id", async (req, res, next) => {
-  console.log("쿼리입니다", req.query);
+  //console.log("쿼리입니다", req.query);
 
   let { user_id } = req.params;
   
@@ -52,9 +52,15 @@ router.get("/:user_id", async (req, res, next) => {
     return;
   }
 
-  let total = await Note.countDocuments({});
+  let total = await Note.countDocuments({
+    user_id: user_id,
+    use_at: true
+  });
 
-  let note = await Note.find({ user_id: user_id })
+  let note = await Note.find({
+    user_id: user_id,
+    use_at: true 
+  })
     .sort({ createdAt: -1 })
     .skip(perPage * (page - 1))
     .limit(perPage);
@@ -96,22 +102,93 @@ router.post("/:user_id/update", async (req, res, next) => {
   }
 });
 
-// 내 노트 삭제
-//http://localhost:8080/record/user_id/delete
-router.post("/:shortId/delete", async (req, res, next) => {
-  let { user_id } = req.params;
-  try {
-    //shortId에 해당하는 일기장을 삭제함.    => user_id 에 해당하는 것을 삭제 하면 안됨
-    await Daily.deleteOne({ shortId });
+// ------------------- 휴지통 -----------------------
 
-    res.json({
-      status: true,
-      message: "노트가 삭제 되었습니다.",
-    });
-  } catch (e) {
-    next(e);
+// 휴지통 노트 조회
+//http://localhost:8080/record/trashcan/user_id
+router.get("/trashcan/:user_id", async (req, res, next) => {
+  //console.log("쿼리입니다", req.query);
+  const now = new Date();
+  //console.log("현재시간:", now);
+  
+  let { user_id } = req.params;
+  
+
+  let page = Number(req.query.page) || 1;
+
+  if (page < 1) {
+    next("존재하지 않는 페이지 입니다.");
+    return;
   }
+
+  let perPage = Number(req.query.perPage) || 10;
+  if (perPage > 10) {
+    next("한 페이지에 최대 10개의 노트를 볼 수 있습니다.");
+    return;
+  }
+
+  let total = await Note.countDocuments({
+    user_id: user_id,
+    use_at: false,
+    updatedAt: { $gt : new Date(now.setMonth(now.getMonth() - 1))} //한달 전 데이터
+  });
+  //console.log("휴지통 노트 개수:" , total);
+
+  let note = await Note.find({ 
+    user_id: user_id,
+    use_at : false,
+    updatedAt: { $gt : new Date(now.setMonth(now.getMonth() - 1))} //한달 전 데이터 
+  })
+    .sort({ createdAt: -1 })
+    .skip(perPage * (page - 1))
+    .limit(perPage);
+  // .populate('folder')
+
+  let totalPage = Math.ceil(total / perPage);
+
+  // console.log(note);
+
+  res.json({ note, totalPage });
 });
+
+//내 노트 삭제
+//http://localhost:8080/record/delete
+router.post("/delete", async (req, res, next) => {
+  let noteIdList = req.body;
+  //console.log(noteIdList);
+    try {
+      await Note.updateMany({
+        use_at: false
+      }).where('_id').in(noteIdList);
+
+      res.json({
+        status: true,
+        message: "노트를 삭제했습니다."
+      })
+    } catch(e) {
+      next(e);
+    }
+  })
+
+// 내 노트 복구
+//http://localhost:8080/record/restore
+router.post("/restore", async (req, res, next) => {
+  //console.log(req.body);
+  let noteIdList = req.body;
+  //console.log(noteIdList);
+    try {
+      await Note.updateMany({
+        use_at: true
+      }).where('_id').in(noteIdList);
+
+      res.json({
+        status: true,
+        message: "노트를 복구했습니다."
+      })
+    } catch(e) {
+      next(e);
+    }
+  })
 
 // vito 토큰 발급
 router.get("/vito/token", async (req, res, next) => {

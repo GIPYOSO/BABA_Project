@@ -5,6 +5,7 @@ import MainPage from "./pages/MainPage";
 import Mypage from "./pages/Mypage";
 import RecordPage from "./pages/RecordPage";
 import Register from "./pages/Register";
+import Trashcan from "./pages/RecordPage";
 import MeetingMinutes from "./components/Common/MeetingMinutes/MeetingMinutes";
 import fileUpload from "./components/Record/FileUpload";
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="create" element={<RecordPage />} />
           <Route path="detail" element={<RecordPage />} />
           <Route path="fileUpload" element={<RecordPage />} />
+          <Route path="trashCan" element={<RecordPage />} />
         </Route>
         <Route path="/mypage" element={<Mypage />} />
       </Routes>
