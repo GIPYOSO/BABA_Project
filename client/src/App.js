@@ -22,6 +22,7 @@ function App() {
           <Route path="create" element={<RecordPage />} />
           <Route path="detail" element={<RecordPage />} />
           <Route path="fileUpload" element={<RecordPage />} />
+          <Route path="favorite" element={<RecordPage />} />
           <Route path="trashCan" element={<RecordPage />} />
         </Route>
         <Route path="/mypage" element={<Mypage />} />

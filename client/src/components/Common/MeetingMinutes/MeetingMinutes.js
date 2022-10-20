@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import NavVar from "../Nav/NavVar";
 import Trashcan from "../../Record/Trashcan";
+import Favorite from "../../Record/Favorite";
 
 function MeMi() {
   const sampleLocation = useLocation();
@@ -27,6 +28,8 @@ function MeMi() {
             return <Create />;
           } else if (pathName === "/detail") {
             return <Detail />;
+          } else if (pathName === "/favorite"){
+            return <Favorite />;
           } else if (pathName === "/trashcan"){
             return <Trashcan />;
           }

@@ -30,6 +30,10 @@ function AsideList(){
         navigate('/record')
     }
 
+    let clickFavoriteNote = () => {
+        navigate('/record/favorite')
+    }
+
     // 휴지통
     let clickTrashcanNote = () => {
         navigate('/record/trashcan')
@@ -51,7 +55,7 @@ function AsideList(){
                 <ul>
                     <li onClick={clickAllNote}><img src={Playlist} />전체 노트</li>
                     <li><img src={Recent} />최근 노트</li>
-                    <li><img src={Star} />즐겨찾는 노트</li>
+                    <li onClick={clickFavoriteNote}><img src={Star} />즐겨찾는 노트</li>
                 </ul>
                 <span>공유된 노트</span>
                 <ul>

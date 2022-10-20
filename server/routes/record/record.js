@@ -19,7 +19,7 @@ router.post("/", async (req, res, next) => {
       contents,
       file_url,
       memo,
-      favorites,
+      favorites: false,
       use_at: true,
       // author: authData
     });
@@ -100,6 +100,91 @@ router.post("/:user_id/update", async (req, res, next) => {
     next(e);
   }
 });
+
+// ------------------ 즐겨찾기 ----------------------
+
+// 즐겨찾기 조회
+//http://localhost:8080/record/favorite/user:id
+router.get("/favorite/:user_id", async (req, res, next) => {
+  //console.log("쿼리입니다", req.params);
+
+  let { user_id } = req.params;
+  
+
+  let page = Number(req.query.page) || 1;
+
+  if (page < 1) {
+    next("존재하지 않는 페이지 입니다.");
+    return;
+  }
+
+  let perPage = Number(req.query.perPage) || 10;
+  if (perPage > 10) {
+    next("한 페이지에 최대 10개의 노트를 볼 수 있습니다.");
+    return;
+  }
+
+  let total = await Note.countDocuments({
+    user_id: user_id,
+    favorites: true,
+    use_at: true
+  });
+
+  let note = await Note.find({
+    user_id: user_id,
+    favorites: true,
+    use_at: true 
+  })
+    .sort({ createdAt: -1 })
+    .skip(perPage * (page - 1))
+    .limit(perPage);
+  // .populate('folder')
+
+  let totalPage = Math.ceil(total / perPage);
+
+  // console.log(note);
+
+  res.json({ note, totalPage });
+});
+
+//즐겨찾기 추가
+//http://localhost:8080/record/favorite
+router.post("/favorite", async (req, res, next) => {
+  let noteIdList = req.body;
+  //console.log(noteIdList);
+    try {
+      await Note.updateMany({
+        favorites: true
+      }).where('_id').in(noteIdList);
+
+      res.json({
+        status: true,
+        message: "즐겨찾기에 추가했습니다."
+      })
+    } catch(e) {
+      next(e);
+    }
+  })
+
+//즐겨찾기 삭제
+//http://localhost:8080/record/unfavorite
+router.post("/unfavorite", async (req, res, next) => {
+  //console.log(req.body);
+  let noteIdList = req.body;
+  //console.log(noteIdList);
+    try {
+      await Note.updateMany({
+        favorites: false
+      }).where('_id').in(noteIdList);
+
+      res.json({
+        status: true,
+        message: "즐겨찾기에서 삭제했습니다."
+      })
+    } catch(e) {
+      next(e);
+    }
+  })
 
 // ------------------- 휴지통 -----------------------
 

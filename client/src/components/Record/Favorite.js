@@ -10,17 +10,16 @@ import Checkbox from '@mui/material/Checkbox';
 import { blue } from '@mui/material/colors';
 import { IconButton } from '@mui/material';
 //import { styled } from '@mui/material/styles';
-import Stack from '@mui/material/Stack';
-import RestoreIcon from '@mui/icons-material/Restore';
+import BookmarkRemoveRoundedIcon from '@mui/icons-material/BookmarkRemoveRounded';
 import styled from 'styled-components';
 
 const DivStyle1 = styled.div`
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 `
-const Trashcan = () => {
+const Favorite = () => {
     const [cookies, setCookie, removeCookie] = useCookies(["token"]);
     const navigate = useNavigate();
     const [noteData, setNoteData] = useState([])
@@ -30,8 +29,8 @@ const Trashcan = () => {
 
     useEffect(() => {
         //노트 데이터를 요청하는 함수
-        let getDeleteNoteData = async () => {
-            return await axios.get(`${server.url}/record/trashcan/${cookies.token.user_id}`)
+        let getFavoriteNoteData = async () => {
+            return await axios.get(`${server.url}/record/favorite/${cookies.token.user_id}`)
                 .then(res => {
                     let response = res.data
                     setNoteData(response)
@@ -39,7 +38,7 @@ const Trashcan = () => {
                     console.log(e)
                 })
         }
-        getDeleteNoteData()
+        getFavoriteNoteData()
     }, [])
 
     //체크박스 이벤트 핸들러
@@ -73,25 +72,24 @@ const Trashcan = () => {
         // getNoteData()
     }
 
-    //노트 데이터 복구하기
-    let restoreNoteBtn = async () => {
+    //즐겨찾기 삭제
+    let unfavoriteNoteBtn = async () => {
         console.log(checkedInputs);
-        return await axios.post(server.url + '/record/restore', checkedInputs);
+        return await axios.post(server.url + '/record/unfavorite', checkedInputs);
     }
 
 
     return (
         <div className="list">
-            <h3>휴지통</h3>
+            <h3>즐겨찾는 노트</h3>
             <DivStyle1>
-                <p>삭제된 노트는 30일까지 보관됩니다.</p>
                 <IconButton style={{marginRight: "20px"}} variant="contained" aria-label="upload record file" component="label" size="large"
                     onClick={() => {
                         if (checkedInputs.length === 0) {
-                            alert("복구할 노트를 선택하세요.");
+                            alert("즐겨찾기에서 제외할 노트를 선택하세요.");
                             return;
                         }
-                        restoreNoteBtn().then(res => {
+                        unfavoriteNoteBtn().then(res => {
                             console.log(res);
                             if (res.data.status) {
                                 alert(res.data.message);
@@ -101,7 +99,7 @@ const Trashcan = () => {
                             console.log(err)
                         })
                     }}>
-                    <RestoreIcon fontSize="inherit" />
+                    <BookmarkRemoveRoundedIcon fontSize="inherit" />
                 </IconButton>
             </DivStyle1>
             {noteData.length === 0 ?
@@ -169,4 +167,4 @@ const Trashcan = () => {
     );
 };
 
-export default Trashcan;
+export default Favorite;

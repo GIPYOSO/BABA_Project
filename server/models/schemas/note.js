@@ -15,7 +15,7 @@ module.exports = new Schema(
     contents: String,
     file_url: String,
     memo: String,
-    favorites: String,
+    favorites: Boolean,
     use_at: Boolean,
     created_at: Date,
     updated_at: Date,
