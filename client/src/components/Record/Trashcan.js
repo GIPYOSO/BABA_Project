@@ -7,6 +7,9 @@ import { textAlign } from '@mui/system';
 import { useState } from 'react';
 import moment from 'moment'
 import { useNavigate } from 'react-router-dom';
+import Checkbox from '@mui/material/Checkbox';
+import { blue } from '@mui/material/colors';
+
 
 const Trashcan = () => {
     const [cookies, setCookie, removeCookie] = useCookies(["token"]);
@@ -14,6 +17,7 @@ const Trashcan = () => {
     const [noteData, setNoteData] = useState([])
     const [page, setPage] = useState(1);
     const [checkedInputs, setCheckedInputs] = useState([]);
+    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
     useEffect(() => {
         //노트 데이터를 요청하는 함수
@@ -63,6 +67,10 @@ const Trashcan = () => {
     //노트 데이터 복구하기
     let restoreNoteBtn = async () => {
         console.log(checkedInputs);
+        if(checkedInputs === []){
+            alert("복구할 노트를 선택하세요.");
+            return;
+        }
         return await axios.post(server.url + '/record/restore', checkedInputs);
     }
 
@@ -71,16 +79,20 @@ const Trashcan = () => {
         <div className="list">
             <h3>휴지통</h3>
             <button onClick={() => {
-                            restoreNoteBtn().then(res => {
-                                console.log(res);
-                                if(res.data.status) {
-                                    alert(res.data.message);
-                                    window.location.reload();
-                                }
-                            }).catch(err => {
-                                console.log(err)
-                            })
-                        }}>복구</button>
+                if(checkedInputs.length === 0){
+                    alert("복구할 노트를 선택하세요.");
+                    return;
+                }
+                restoreNoteBtn().then(res => {
+                    console.log(res);
+                    if (res.data.status) {
+                        alert(res.data.message);
+                        window.location.reload();
+                    }
+                }).catch(err => {
+                    console.log(err)
+                })
+            }}>복구</button>
             <h5>삭제된 노트는 30일까지 보관됩니다.</h5>
             {noteData.length === 0 ?
                 (<table>
@@ -116,10 +128,21 @@ const Trashcan = () => {
                                 {
                                     noteData.note.map((data, i) => (
                                         <tr key={i}>
-                                            <td><input type="checkbox" checked={checkedInputs.includes(data._id) ? true : false} 
-                                            onChange={(e) => {
-                                                changeHandler(e.target.checked, data._id)
-                                            }} /></td>
+                                            <td>
+                                                <Checkbox {...label} size="small" sx={{
+                                                    // color: pink[800],
+                                                    '&.Mui-checked': {
+                                                        color: blue[900],
+                                                    },
+                                                }} checked={checkedInputs.includes(data._id) ? true : false}
+                                                    onChange={(e) => {
+                                                        changeHandler(e.target.checked, data._id)
+                                                    }} />
+                                            </td>
+                                            {/* <td><input type="checkbox" checked={checkedInputs.includes(data._id) ? true : false}
+                                                onChange={(e) => {
+                                                    changeHandler(e.target.checked, data._id)
+                                                }} /></td> */}
                                             <td onClick={() => gotoDetail(data)}>{data.title}</td>
                                             <td>{moment(data.updatedAt).format('YYYY-MM-DD')}</td>
                                         </tr>

@@ -7,6 +7,10 @@ import { textAlign } from '@mui/system';
 import { useState } from 'react';
 import moment from 'moment'
 import { useNavigate } from 'react-router-dom';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Checkbox from '@mui/material/Checkbox';
+import { blue } from '@mui/material/colors';
 
 const List = () => {
     const [cookies, setCookie, removeCookie] = useCookies(["token"]);
@@ -14,7 +18,7 @@ const List = () => {
     const [noteData, setNoteData] = useState([])
     const [page, setPage] = useState(1);
     const [checkedInputs, setCheckedInputs] = useState([]);
-
+    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
     useEffect(() => {
         //노트 데이터를 요청하는 함수
@@ -38,7 +42,7 @@ const List = () => {
             // 체크 해제
             setCheckedInputs(checkedInputs.filter((el) => el !== id));
         }
-        console.log("선택 데이터:" , checkedInputs);
+        //console.log("선택 데이터:" , checkedInputs);
     };
 
     const gotoDetail = (data) => {
@@ -70,7 +74,24 @@ const List = () => {
     return (
         <div className="list">
             <h3>전체 노트</h3>
-            <button onClick={() => {
+            <IconButton aria-label="delete" size="large" onClick={() => {
+                if (checkedInputs.length === 0) {
+                    alert("삭제할 노트를 선택하세요.");
+                    return;
+                }
+                deleteNoteBtn().then(res => {
+                    console.log(res);
+                    if (res.data.status) {
+                        alert(res.data.message);
+                        window.location.reload();
+                    }
+                }).catch(err => {
+                    console.log(err)
+                })
+            }}>
+                <DeleteIcon fontSize="inherit" />
+            </IconButton>
+            {/* <button onClick={() => {
                             deleteNoteBtn().then(res => {
                                 console.log(res);
                                 if(res.data.status) {
@@ -80,7 +101,7 @@ const List = () => {
                             }).catch(err => {
                                 console.log(err)
                             })
-                        }}>삭제</button>
+                        }}>삭제</button> */}
             {noteData.length === 0 ?
                 (<table>
                     <colgroup>
@@ -115,11 +136,22 @@ const List = () => {
                                 {
                                     noteData.note.map((data, i) => (
                                         <tr key={i}>
-                                            <td><input type="checkbox" checked={checkedInputs.includes(data._id) ? true : false}
+                                            <td>
+                                                <Checkbox {...label} size="small" sx={{
+                                                    // color: pink[800],
+                                                    '&.Mui-checked': {
+                                                        color: blue[900],
+                                                    },
+                                                }} checked={checkedInputs.includes(data._id) ? true : false}
+                                                    onChange={(e) => {
+                                                        changeHandler(e.target.checked, data._id)
+                                                    }} />
+                                            </td>
+                                            {/* <td><input type="checkbox" checked={checkedInputs.includes(data._id) ? true : false}
                                                 onChange={(e) => {
                                                     changeHandler(e.target.checked, data._id)
                                                 }} /></td>
-                                            <td onClick={() => gotoDetail(data)}>{data.title}</td>
+                                            <td onClick={() => gotoDetail(data)}>{data.title}</td> */}
                                             <td>{moment(data.updatedAt).format('YYYY-MM-DD')}</td>
                                         </tr>
                                     ))
