@@ -50,6 +50,27 @@ const List = () => {
         navigate('/record/detail', { state: data });
     }
 
+
+    let getShareData = async (data) => {
+        console.log(data._id);
+        return await axios.get(`${server.url}/record/share/${data._id}`)
+            .then(res => {
+                let response = res.data
+                console.log(res)
+                // setNoteData(response)
+            }).catch(e => {
+                console.log(e)
+            })
+    }
+
+
+    const shareDetail = (data) => {
+        //공유할 떄 노트의 url을 가져오는 함수 
+       console.log("쉐어 입니다", data);
+       getShareData(data);
+    
+    }
+
     const onChangePagenation = (event, value) => {
         console.log(value)
         //페이지에 따라 노트 데이터를 요청하는 함수
@@ -66,11 +87,15 @@ const List = () => {
         // getNoteData()
     }
 
+ 
+
     //노트 데이터 삭제(휴지통으로 이동)
     let deleteNoteBtn = async () => {
         console.log(checkedInputs);
         return await axios.post(server.url + '/record/delete', checkedInputs);
     }
+
+
 
     return (
         <div className="list">
@@ -147,12 +172,14 @@ const List = () => {
                                                     onChange={(e) => {
                                                         changeHandler(e.target.checked, data._id)
                                                     }} />
+                                                    <button onClick={() => shareDetail(data)}>공유</button>
+                                                   
                                             </td>
                                             {/* <td><input type="checkbox" checked={checkedInputs.includes(data._id) ? true : false}
                                                 onChange={(e) => {
                                                     changeHandler(e.target.checked, data._id)
-                                                }} /></td>
-                                            <td onClick={() => gotoDetail(data)}>{data.title}</td> */}
+                                                }} /></td> */}
+                                            <td onClick={() => gotoDetail(data)}>{data.title}</td>
                                             <td>{moment(data.updatedAt).format('YYYY-MM-DD')}</td>
                                         </tr>
                                     ))
