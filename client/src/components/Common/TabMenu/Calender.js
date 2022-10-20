@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import googleCalendarPlugin from '@fullcalendar/google-calendar';
+// import FullCalendar from "@fullcalendar/react";
+// import dayGridPlugin from "@fullcalendar/daygrid";
+// import googleCalendarPlugin from '@fullcalendar/google-calendar';
 
 
 import { useCookies } from 'react-cookie'
