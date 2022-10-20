@@ -5,7 +5,6 @@ import axios from "axios";
 
 import styled from "styled-components";
 import Memo from "./Memo";
-import Calendar from "./Calender";
 import TodoList from "./Todo";
 // import FullCalendar from "@fullcalendar/react";
 // import dayGridPlugin from "@fullcalendar/daygrid";
@@ -88,21 +87,13 @@ let Tabmenu = (props) => {
             changeState("calender");
           }}
         >
-          {""}캘린더
-        </TabBtn>
-        <TabBtn
-          onClick={() => {
-            changeState("todo");
-          }}
-        >
+        
           {""}할 일{""}
         </TabBtn>
       </TabMenuBox>
       <TabContentBox>
         {ChangeMenu === "memo" ? (
           <Memo noteData={props.noteData} setNoteData={props.setNoteData} setMemo={props.setMemo} setTabMemo={setTabMemo}/>
-        ) : ChangeMenu === "calender" ? (
-          <Calendar setCalender={props.setCalender} />
         ) : ChangeMenu === "todo" ? (
           <TodoList setTodo={props.setTodo} />
         ) : (

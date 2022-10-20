@@ -20,7 +20,7 @@ import Nabvar from "./../components/Common/Nav/NavVar"
 
 
 const Divstyle1 = styled.div`
-  width: 1520px;
+  width: 1460px;
   height: 800px;
   border: 1px solid #d9d9d9;
   float: right;
@@ -34,9 +34,7 @@ const Divstyle2 = styled.div`
   height: 340px;
   border: 1px solid #d9d9d9;
   display: inline-block;
-  float: left;
   padding: 30px;
-  bottom: 0px;
   text-align: center;
 `;
 
@@ -45,18 +43,16 @@ const Divstyle3 = styled.div`
   height: 210px;
   border: 1px solid #d9d9d9;
   position: absolute;
-  float: left;
   padding: 30px;
-  bottom: 50px;
+  bottom: 113px;
 `;
 
 const DivStyle4 = styled.div`
-  width: 940px;
+  width: 900px;
   height: 680px;
   border: 1px solid #d9d9d9;
+  box-sizing: border-box;
   float: right;
-  margin-right: 30px;
-  display: inline-block;
 `;
 
 const NavStyle = styled.div`
@@ -66,6 +62,7 @@ float : right;
 
 const TextStyle = styled.h1`
   font-size: 36px;
+  margin-bottom: 20px;
   color: #504d4d;
 `;
 

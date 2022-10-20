@@ -1,41 +1,97 @@
-.asideSection {
-  float: left;
-  width:25%;
-  border-right: 1px solid #d9d9d9;
-  box-sizing: border-box;
+
+
+
+/*? tablet */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .asideSection {
+    float: left;
+    width:20%;
+    border-right: 1px solid #d9d9d9;
+    box-sizing: border-box;
+  }
+  .asideSection aside h1 {
+    margin-left: 9.5%;
+    margin-bottom: 30px;
+  }
+  .asideSection aside span {
+    padding: 0 0 5px 4.5%;
+    display: block;
+    font-size: 12px;
+    color: #8c8d8d;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 37px;
+  }
+  .asideSection aside ul {
+    margin-left: 32px;
+    margin-bottom: 60px;
+  }
+  .asideSection aside ul li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    line-height: 53px;
+    width: 80%;
+    padding-left: 5%;
+  }
+  .asideSection aside ul li:hover {
+    background-color: rgba(62, 128, 189, 0.4);
+    box-shadow: 0 4px 4px #8c8d8d;
+    border-radius: 5px;
+  }
+  .asideSection aside ul li img {
+    margin-right: 4%;
+    width: 15%;
+    vertical-align: middle;
+  }
+
 }
 
-.asideSection aside h1 {
-  margin-left: 9.5%;
-  margin-bottom: 30px;
-}
-.asideSection aside span {
-  padding: 0 0 5px 4.5%;
-  display: block;
-  font-size: 12px;
-  color: #8c8d8d;
-  border-bottom: 1px solid #d9d9d9;
-  margin-bottom: 37px;
-}
-.asideSection aside ul {
-  margin-left: 32px;
-  margin-bottom: 60px;
-}
-.asideSection aside ul li {
-  list-style: none;
-  font-size: 22px;
-  font-weight: normal;
-  cursor: pointer;
-  line-height: 53px;
-  width: 85.23%;
-  padding-left: 8%;
-}
-.asideSection aside ul li:hover {
-  background-color: rgba(62, 128, 189, 0.4);
-  box-shadow: 0 4px 4px #8c8d8d;
-  border-radius: 5px;
-}
-.asideSection aside ul li img {
-  margin-right: 4%;
-  vertical-align: middle;
+
+
+/* ? desktop */
+@media screen and (min-width: 1280px){
+  .asideSection {
+    float: left;
+    width:20%;
+    border-right: 1px solid #d9d9d9;
+    box-sizing: border-box;
+  }
+  .asideSection aside{
+    width: 100%;
+  }
+  .asideSection aside h1 {
+    margin-left: 9.5%;
+    margin-bottom: 30px;
+  }
+  .asideSection aside span {
+    padding: 0 0 5px 4.5%;
+    display: block;
+    font-size: 12px;
+    color: #8c8d8d;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 37px;
+  }
+  .asideSection aside ul {
+    margin-left: 32px;
+    margin-bottom: 60px;
+  }
+  .asideSection aside ul li {
+    list-style: none;
+    font-size: 1rem;
+    font-weight: normal;
+    cursor: pointer;
+    line-height: 53px;
+    
+    padding-left: 8%;
+  }
+  .asideSection aside ul li:hover {
+    background-color: rgba(62, 128, 189, 0.4);
+    box-shadow: 0 4px 4px #8c8d8d;
+    border-radius: 5px;
+  }
+  .asideSection aside ul li img {
+    margin-right: 4%;
+    vertical-align: middle;
+  }
 }
