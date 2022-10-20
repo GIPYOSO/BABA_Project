@@ -270,4 +270,30 @@ const getVITORestlt = async (id, token) => {
   });
 };
 
+//-----------------------------------공유-------------------------------
+router.get("/share/:id", async (req, res, next) => {
+  console.log("공유 쿼리 입니다.", req.params);
+
+  const {id} = req.params;
+  
+  try{
+    let note = await Note.find({_id : id })
+
+    console.log(note);
+    res.json(note);
+  }catch(err) {
+
+  }
+
+
+
+
+
+  // console.log(note);
+
+  // res.json({ note, totalPage });
+});
+
+
+
 module.exports = router;
