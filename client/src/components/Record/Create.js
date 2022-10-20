@@ -4,9 +4,10 @@ import { Navigate, useLocation } from "react-router-dom";
 import axios from 'axios';
 import server from './../../config/server.json';
 import { useCookies } from "react-cookie";
-import {CircularProgress} from '@mui/material';
+import {CircularProgress, TextField, Button} from '@mui/material';
 import TabMenu from "./../Common/TabMenu/TabMenu";
 import { useNavigate } from 'react-router-dom';
+import NoticeWriteComponent from './NoticeWriteComponent';
 
 const Create = () => {
     const [cookies, setCookie, removeCookie] = useCookies(["token"]);
@@ -36,7 +37,10 @@ const Create = () => {
         todo_title: '',
         date: ''
     })
-    
+
+    // 제목 유효성 체크
+    const [error, setError] = useState(false)
+
     useEffect(() => {
         createFile(FILE); //회의록 생성
         //console.log("쿠키", cookies.token.user_id);
@@ -102,6 +106,11 @@ const Create = () => {
 
     // 노트 데이터, 캘린더, 투두 한꺼번에 등록
     let submitNote = async () => {
+        let error = false
+        if(noteData.title === "") {
+            error = true
+        }
+        setError(error)
         // 자식 컴포넌트에서 받아온 data log
         console.log("부모 컴포넌트 메모: ", memo)        
         console.log("부모 컴포넌트 캘린더: ", calender)        
@@ -109,27 +118,28 @@ const Create = () => {
 
         // 3개의 request를 변수에 담아줌
         const requestOne = axios.post(`${server.url}/record`, noteData);
-        const requestTwo = axios.post(`${server.url}/calender/add_events`, calender);
-        const requestThree = axios.post(`${server.url}/todo`, todo);
+        // const requestTwo = axios.post(`${server.url}/calender/add_events`, calender);
+        // const requestThree = axios.post(`${server.url}/todo`, todo);
+        if (!error) {
+            // axios all로 한번에 보내고 결과값 한번에 받음
+            axios.all([requestOne]).then(axios.spread((...responses) => {
+                const responseOne = responses[0]
+                // const responseTwo = responses[1]
+                // const responesThree = responses[2]
+                console.log("노트 결과", responseOne)
+                // console.log("캘린더 결과" ,responseTwo)
+                // console.log("투두 결과" ,responesThree)
 
-        // axios all로 한번에 보내고 결과값 한번에 받음
-        axios.all([requestOne, requestTwo, requestThree]).then(axios.spread((...responses) => {
-            const responseOne = responses[0]
-            const responseTwo = responses[1]
-            const responesThree = responses[2]
-            console.log("노트 결과", responseOne)
-            console.log("캘린더 결과" ,responseTwo)
-            console.log("투두 결과" ,responesThree)
-
-            // 우선 노트 데이터만 잘 등록 됐을 때 페이지 이동하도록 해놓음
-            if(responseOne.data.status) {
-                alert('등록되었습니다.')
-                navigate('/record')
-            }
-            // use/access the results 
-        })).catch(errors => {
-            console.log(errors)
-        })
+                // 우선 노트 데이터만 잘 등록 됐을 때 페이지 이동하도록 해놓음
+                if(responseOne.data.status) {
+                    alert('등록되었습니다.')
+                    navigate('/record')
+                }
+                    // use/access the results 
+                })).catch(errors => {
+                    console.log(errors)
+                })
+        }
     }
 
     // inline style
@@ -154,21 +164,52 @@ const Create = () => {
              {
                 transformFinishState ?
                     (
-                        <>
-                            <div style={leftBox}>
-                                <div><input type="text" name="title" placeholder='제목을 입력하세요.' onChange={onChangeData}/></div>
-                                <textarea defaultValue={contentText} name="contents" style={textarea} onChange={onChangeData}></textarea>
-                                {/* <div style={{ whiteSpace: "pre-wrap" }}>
-                                    {contentText}
-                                </div> */}
+                        <>  
+                            <div className="detail">
+                                <div className="titleWrap">
+                                <TextField 
+                                id="fullWidth"
+                                name="title" 
+                                label="제목" 
+                                placeholder="제목을 입력하세요." 
+                                defaultValue={noteData.title} 
+                                onChange={onChangeData} 
+                                variant="standard" 
+                                fullWidth 
+                                error={error}
+                                helperText={ error ? ("제목을 입력하세요.") : ("") }
+                                />
+
+                                </div>
+                                <div class="contentWrap">
+                                <div className="clear">
+                                    <div className="leftBox">
+                                    <NoticeWriteComponent value={noteData} setNoteData={setNoteData}/>
+                                    </div>
+                                    <div className="rightBox">
+                                        <TabMenu noteData={noteData} setNoteData={setNoteData} setMemo={setMemo} setCalender={setCalender} setTodo={setTodo}/>
+                                        
+                                        <div className="buttonWrap">
+                                            <Button variant="contained" onClick={submitNote}>등록</Button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
                             </div>
-                            <div style={rightBox}>
-                                <TabMenu noteData={noteData} setNoteData={setNoteData} setMemo={setMemo} setCalender={setCalender} setTodo={setTodo}/>
-                            </div>
-                            <button onClick={submitNote}>저장</button>
                         </>
                     )
-                    : (<CircularProgress />)
+                    : (
+                        <>
+                            <div style={{
+                                position: 'absolute',
+                                top: '50%',
+                                left: '60%',
+                                transform: 'translate(-50%, -50%)'
+                                }}>
+                                <CircularProgress/>
+                            </div>
+                        </>
+                    )
              }
 
         </>

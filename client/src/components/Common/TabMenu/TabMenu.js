@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Component } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 import styled from "styled-components";
@@ -14,6 +14,7 @@ import TodoList from "./Todo";
 const TabBox = styled.div`
   max-width: 400px;
   width: 100%;
+  height: 640px;
 `;
 
 const TabMenuBox = styled.div`
@@ -50,13 +51,9 @@ let Tabmenu = (props) => {
 
   let changeState = (name) => {
     setChangeMenu(name);
-    props.setNoteData({
-      ...props.noteData,
-      memo: tabMemo
-    })
     return;
   };
-
+  
   let state = (name) => {
     changeState(name);
     switch (name) {
@@ -65,12 +62,23 @@ let Tabmenu = (props) => {
     }
   };
   
+  useEffect(() => {
+    console.log(props.noteData.memo)
+    // props.setNoteData({
+    //   ...props.noteData,
+    //   memo: props.noteData.memo
+    // })
+  }, [])
   return (
     <TabBox>
       <TabMenuBox>
         <TabBtn
           onClick={() => {
             changeState("memo");
+            props.setNoteData({
+              ...props.noteData,
+              memo: props.noteData.memo
+            })
           }}
         >
           {""}메모

@@ -25,8 +25,10 @@ let RecordPage = () => {
   return (
     <>
       <Modal />
-      <Aside />
-      <MeMi />
+      <div class="clear">
+        <Aside />
+        <MeMi />
+      </div>
     </>
   );
 };

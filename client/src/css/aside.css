@@ -1,7 +1,10 @@
-.asideSection aside {
-  width: 18%;
+.asideSection {
   float: left;
+  width:25%;
+  border-right: 1px solid #d9d9d9;
+  box-sizing: border-box;
 }
+
 .asideSection aside h1 {
   margin-left: 9.5%;
   margin-bottom: 30px;

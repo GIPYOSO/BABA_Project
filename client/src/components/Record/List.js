@@ -26,6 +26,7 @@ const List = () => {
             return await axios.get(`${server.url}/record/${cookies.token.user_id}`)
                 .then(res => {
                     let response = res.data
+                    console.log(res)
                     setNoteData(response)
                 }).catch(e => {
                     console.log(e)

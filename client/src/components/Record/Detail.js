@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 import server from './../../config/server.json'
-import { Button } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 import { useCookies } from "react-cookie";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { jsPDF } from "jspdf";
 import _fonts from "../../assets/fonts/gulim";
 import moment from "moment";
@@ -13,47 +13,46 @@ import TabMenu from "./../Common/TabMenu/TabMenu";
 const Detail = () => {
   // console.log(useLocation().state) // list에서 받아 온 detail data 
 
-    const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+  const navigate = useNavigate()
 
-    // 하위 컴포넌트 data setter
-    const [memo, setMemo] = useState('')
-    const [calender, setCalender] = useState({
-        user_id: '',
-        title: '',
-        date: ''
+  // 하위 컴포넌트 data setter
+  const [memo, setMemo] = useState('')
+  const [calender, setCalender] = useState({
+      user_id: '',
+      title: '',
+      date: ''
+  })
+  const [todo, setTodo] = useState({
+      user_id: '',
+      todo_title: '',
+      date: ''
+  })
+
+  // list에서 onclick으로 전달해준 state를 상세 데이터로 셋팅
+  const [noteData, setNoteData] = useState(useLocation().state);
+
+  // noteData change 될 때 마다 set
+  let onChangeData = (e) => {
+    setNoteData({
+        ...noteData,
+        [e.target.name] : e.target.value
     })
-    const [todo, setTodo] = useState({
-        user_id: '',
-        todo_title: '',
-        date: ''
-    })
-
-    // list에서 onclick으로 전달해준 state를 상세 데이터로 셋팅
-    const [noteData, setNoteData] = useState(useLocation().state);
-
-  // useEffect(() => {
-  //   console.log();
-  //   getNoteData()
-
-  //   updateNoteData()
-  //   .then((res) => {
-  //     console.log('응답코드입니다', res);
-  //     setNoteData(res.data.user);
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //   });
-  // }, noteData);
+  } 
 
   let updateNoteData = async () => {
-    console.log(noteData)
-    // return await // http://localhost:8080/record/user_id/update
-    //   axios.post(`http://localhost:8080/record/${noteData.user_id}/update`, noteData)
-    //       .then(res => {
-    //         console.log(res)
-    //       }).catch(e => {
-    //         console.log(e)
-    //       })
+    console.log("노트데이터", noteData);
+    return await // http://localhost:8080/record/user_id/update
+      axios.post(`http://localhost:8080/record/${noteData.user_id}/update`, noteData)
+          .then(res => {
+            console.log(res)
+            if(res.data.status) {
+              alert('수정되었습니다.')
+              // navigate('/record')
+            }
+          }).catch(e => {
+            console.log(e)
+          })
   }
 
   let downloadBtn = (noteData) => {
@@ -83,21 +82,29 @@ const Detail = () => {
   }
 
   return (
-    <div class="wrap">
-      <input type="text" name="title" defaultValue={noteData.title} />
-      <p>생성 날짜: {moment(noteData.createdAt).format("YYYY-MM-DD HH:mm:ss")}</p>
-      <p>수정 날짜: {moment(noteData.updatedAt).format("YYYY-MM-DD HH:mm:ss")}</p>
-      <div style={leftBox}>
-        <NoticeWriteComponent value={noteData} setNoteData={setNoteData}/>
-      </div>
-      <div style={rightBox}>
-          <TabMenu noteData={noteData} setNoteData={setNoteData} setMemo={setMemo} setCalender={setCalender} setTodo={setTodo}/>
-      </div>
-      {/* <textarea name="contents" defaultValue={noteData.contents} /> */}
-      <button name="download" onClick={() => {
-        downloadBtn(noteData);
-      }}>PDF 다운로드</button>
-      <button onClick={updateNoteData}>저장</button>
+    <div className="detail">
+        <div className="titleWrap">
+          <p className="date">{moment(noteData.updatedAt).format("YYYY-MM-DD")}</p>
+          <TextField id="fullWidth" name="title" label="제목" placeholder="제목을 입력하세요." defaultValue={noteData.title} onChange={onChangeData} variant="standard" fullWidth />
+
+        </div>
+        <div class="contentWrap">
+          <div className="clear">
+            <div className="leftBox">
+              <div class="buttonWrap">
+                <Button name="download" onClick={() => {downloadBtn(noteData);}}>PDF 다운로드</Button>
+              </div>
+              <NoticeWriteComponent value={noteData} setNoteData={setNoteData}/>
+            </div>
+            <div className="rightBox">
+                <TabMenu noteData={noteData} setNoteData={setNoteData} setMemo={setMemo} setCalender={setCalender} setTodo={setTodo}/>
+                
+                <div className="buttonWrap">
+                  <Button variant="contained" onClick={updateNoteData}>수정</Button>
+                </div>
+            </div>
+          </div>
+        </div>
     </div>
   );
 };

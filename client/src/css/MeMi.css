@@ -52,3 +52,39 @@
     display: flex;
     justify-content: center;
 }
+
+/* record detaii */
+.MMSection .MMBox .detail {
+  
+}
+
+.MMSection .MMBox .detail .titleWrap{
+    padding: 30px;
+    border-bottom:1px solid #d9d9d9
+}
+
+.MMSection .MMBox .detail .contentWrap .clear{
+    border-bottom:1px solid #d9d9d9
+}
+
+.MMSection .MMBox .detail .contentWrap .leftBox{
+    float: left;
+    padding: 30px;
+    width: 60%;
+    border-right:1px solid #d9d9d9
+}
+
+.MMSection .MMBox .detail .contentWrap .rightBox{
+    float: right;
+    padding: 30px;
+    width: 30%;
+}
+
+.MMSection .MMBox .detail .date{
+    text-align: right;
+    color:#626262;
+}
+
+.MMSection .MMBox .detail .buttonWrap{
+    text-align: right;
+}    

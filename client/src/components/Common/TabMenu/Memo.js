@@ -15,8 +15,6 @@ let Memo = (props) => {
   let memo = props.noteData.memo;
 
   let onChange = (e) => {
-    // tabMemu 이동 시 데이터 삭제되는 문제 때문에 setter 추가
-    props.setTabMemo(e.target.value) 
 
     // 실제 noteData set
     props.setNoteData({
@@ -26,19 +24,15 @@ let Memo = (props) => {
 
   };
 
-  useEffect(() => {
-    
-  }, []);
-
   return (
     <>
       <form id="note" className="note tabPg active">
         <p>메모</p>
         <p>
-          <input onChange={onChange} defaultValue={memo}></input>
+          <textarea onChange={onChange} defaultValue={memo}></textarea>
         </p>
       </form>
-      <MemoBoard/>
+      {/* <MemoBoard/> */}
     </>
   );
 };
