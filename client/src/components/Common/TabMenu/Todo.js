@@ -47,11 +47,12 @@ function TodoList(){
 
     return(
         <form id="data">
-            <input defaultValue={inputValue} type="text" name="content" id="content"
+            <input defaultValue={inputValue} type="text" name="content" id="content" className="todoInput"
             onChange={(e)=>{setInputValue(e.target.value)}}></input>
-            <button type="button" onClick={inserIetm}>추가</button>
-
-            <TodoBoard todoList={todoList} data={newTodoList}  />
+            <button type="button" className="todoButton" onClick={inserIetm}>저장</button>
+            <div className="todoListBox">
+                <TodoBoard todoList={todoList} data={newTodoList}  />
+            </div>
         </form>
     )
 }

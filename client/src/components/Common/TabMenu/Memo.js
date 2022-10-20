@@ -27,7 +27,7 @@ let Memo = (props) => {
   return (
     <>
       <form id="note" className="note tabPg active">
-        <p>메모</p>
+        <span className="memoTitle">메모</span>
         <p>
           <textarea onChange={onChange} defaultValue={memo}></textarea>
         </p>

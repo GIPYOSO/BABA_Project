@@ -10,19 +10,16 @@ import TodoList from "./Todo";
 // import dayGridPlugin from "@fullcalendar/daygrid";
 // import $ from "jquery";
 
-const TabBox = styled.div`
-  max-width: 400px;
-  width: 100%;
-  height: 640px;
-`;
 
 const TabMenuBox = styled.div`
   width: 100%;
+  max-width: 515px;
 `;
 
 const TabContentBox = styled.div`
-  width: 100;
+  width: 100%;
   border: 1px solid ##3e80bd;
+  box-sizing: border-box;
 `;
 
 const TabBtn = styled.button`
@@ -32,7 +29,8 @@ const TabBtn = styled.button`
   cursor: pointer;
   background-color: #fff;
   line-height: 40px;
-  width: 33.33%;
+  margin-top: 67px;
+  width: 50%;
 `;
 
 const TabSaveBtn = styled.button`
@@ -69,7 +67,7 @@ let Tabmenu = (props) => {
     // })
   }, [])
   return (
-    <TabBox>
+    <div className="tabBox">
       <TabMenuBox>
         <TabBtn
           onClick={() => {
@@ -84,10 +82,9 @@ let Tabmenu = (props) => {
         </TabBtn>
         <TabBtn
           onClick={() => {
-            changeState("calender");
+            changeState("todo");
           }}
         >
-        
           {""}할 일{""}
         </TabBtn>
       </TabMenuBox>
@@ -100,7 +97,7 @@ let Tabmenu = (props) => {
           <Memo noteData={props.noteData} setNoteData={props.setNoteData} setMemo={props.setMemo} setTabMemo={setTabMemo}/>
         )}
       </TabContentBox>
-    </TabBox>
+    </div>
   );
 };
 export default Tabmenu;
@@ -154,12 +151,12 @@ export default Tabmenu;
 //       return (
 //         <form className="tabmenuBox">
 //             <ul className="tabMove">
-//                 <li data-tab="note" className="tabBtn active">메모</li>
+//                 <li data-tab="memo" className="tabBtn active">메모</li>
 //                 <li data-tab="calender" className="tabBtn">캘린더</li>
 //                 <li data-tab="todo" className="tabBtn">할 일</li>
 //             </ul>
 
-//             <section id="note" className="note tabPg active">
+//             <section id="memo" className="memo tabPg active">
 //                 <p>메모</p>
 //                 <p>
 //                   <textarea
