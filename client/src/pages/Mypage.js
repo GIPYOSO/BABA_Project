@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import FormInput from "./../components/Common/Input/FormInput";
 import SubmitBtn from "./../components/Common/Button/SubmitBtn";
@@ -13,10 +14,9 @@ import UBox from "../components/Mypage/UBox";
 import SBox from "../components/Mypage/SBox";
 import { useEffect } from "react";
 import { useCookies } from "react-cookie";
-
+import { Navigate } from "react-router-dom";
 import Aside from "./../components/Common/Aside/aside";
 import Nabvar from "./../components/Common/Nav/NavVar"
-import axios from "axios";
 
 
 const Divstyle1 = styled.div`
@@ -113,7 +113,7 @@ let Mypage = () => {
     console.log("cookie", cookies);
     if (cookies.token === undefined) {
       alert("로그인이 필요합니다.");
-      navigate("../login");
+      Navigate("../login");
     }
   }, []);
 

@@ -39,11 +39,11 @@ router.post("/write", async (req, res, next) => {
   }
 });
 
-//localhost:8080/todo/ 투두 불러오기
-router.get("/", async (req, res, next) => {
-  console.log(req.body);
+//localhost:8080/todo/user_id 투두 불러오기
+router.get("/:user_id", async (req, res, next) => {
+  console.log(req.params);
 
-  let { user_id } = req.body;
+  let { user_id } = req.params;
 
   let checkEmail = await Todo.findOne({ user_id });
   // db.articles.find( { “writer”: “Velopert”, “likes”: { $lt: 10 } } )
