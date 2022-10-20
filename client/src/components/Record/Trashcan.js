@@ -25,6 +25,7 @@ const Trashcan = () => {
     const navigate = useNavigate();
     const [noteData, setNoteData] = useState([])
     const [page, setPage] = useState(1);
+    const [totalPage, setTotalPage] = useState(1);
     const [checkedInputs, setCheckedInputs] = useState([]);
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -34,7 +35,8 @@ const Trashcan = () => {
             return await axios.get(`${server.url}/record/trashcan/${cookies.token.user_id}`)
                 .then(res => {
                     let response = res.data
-                    setNoteData(response)
+                    setNoteData(response.note)
+                    setTotalPage(response.totalPage)
                 }).catch(e => {
                     console.log(e)
                 })
@@ -57,20 +59,22 @@ const Trashcan = () => {
         navigate('/record/detail', { state: data });
     }
 
+    // 페이지에 따라 노트 데이터를 요청하는 함수
     const onChangePagenation = (event, value) => {
-        console.log(value)
-        //페이지에 따라 노트 데이터를 요청하는 함수
-        // let getNoteData = async () => {
-        //     return await axios.get(`${server.url}/record/${cookies.token.user_id}?page=${value}&perPage=10`)
-        //     .then(res => {
-        //         let response = res.data
-        //         console.log(response)
-        //         setNoteData(response)
-        //     }).catch(e => {
-        //         console.log(e)
-        //     })
-        // }
-        // getNoteData()
+        setPage(value)
+        // console.log(value)
+        let getDeleteNoteData = async () => {
+            return await axios.get(`${server.url}/record/trashcan/${cookies.token.user_id}?page=${value}&perPage=10`)
+            .then(res => {
+                let response = res.data
+                // console.log(response)
+                setNoteData(response.note)
+                setTotalPage(response.totalPage)
+            }).catch(e => {
+                console.log(e)
+            })
+        }
+        getDeleteNoteData()
     }
 
     //노트 데이터 복구하기
@@ -136,7 +140,7 @@ const Trashcan = () => {
                             </thead>
                             <tbody>
                                 {
-                                    noteData.note.map((data, i) => (
+                                    noteData.map((data, i) => (
                                         <tr key={i}>
                                             <td>
                                                 <Checkbox {...label} size="small" sx={{
@@ -161,7 +165,7 @@ const Trashcan = () => {
                             </tbody>
                         </table>
                         <div className="pagingWrap">
-                            <Pagination count={noteData.totalPage} page={page} onChange={onChangePagenation} />
+                            <Pagination count={totalPage} page={page} defaultPage={1} onChange={onChangePagenation} />
                         </div>
                     </>
                 )}
