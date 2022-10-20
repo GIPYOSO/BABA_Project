@@ -116,11 +116,6 @@ const Detail = () => {
               >
                 PDF 다운로드
               </Button>
-              <Button name="share" >
-                
-                공유
-                <Share ></Share>
-              </Button>
             </div>
             <NoticeWriteComponent value={noteData} setNoteData={setNoteData} />
           </div>

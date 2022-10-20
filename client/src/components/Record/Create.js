@@ -181,7 +181,7 @@ const Create = () => {
                                 />
 
                                 </div>
-                                <div class="contentWrap">
+                                <div className="contentWrap">
                                 <div className="clear">
                                     <div className="leftBox">
                                     <NoticeWriteComponent value={noteData} setNoteData={setNoteData}/>
