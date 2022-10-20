@@ -7,12 +7,20 @@ const TextStyle = styled.h1`
   color: #504d4d;
 `;
 
+// const TextDiv = styled.div`
+//   width: 20rem;
+//   height: 50px;
+//   background: black;
+// `;
+
 let UBox = (props) => {
   console.log(props.userData);
 
   return (
     <>
-      <TextStyle> 회원관리 및 수정 </TextStyle>
+   
+        <TextStyle> 회원관리 및 수정 </TextStyle>
+    
 
       <hr
         style={{

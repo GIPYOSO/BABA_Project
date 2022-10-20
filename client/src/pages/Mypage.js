@@ -14,17 +14,16 @@ import UBox from "../components/Mypage/UBox";
 import SBox from "../components/Mypage/SBox";
 import { useEffect } from "react";
 import { useCookies } from "react-cookie";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Aside from "./../components/Common/Aside/aside";
-import Nabvar from "./../components/Common/Nav/NavVar"
-
+import Nabvar from "./../components/Common/Nav/NavVar";
 
 const Divstyle1 = styled.div`
   width: 1460px;
   height: 800px;
   border: 1px solid #d9d9d9;
   float: right;
-  padding: 30px;
+  /* padding: 30px; */
   bottom: 0px;
   position: relative;
 `;
@@ -56,9 +55,9 @@ const DivStyle4 = styled.div`
 `;
 
 const NavStyle = styled.div`
-width: 78.5%;
-float : right;
-`
+  width: 78.5%;
+  float: right;
+`;
 
 const TextStyle = styled.h1`
   font-size: 36px;
@@ -66,13 +65,24 @@ const TextStyle = styled.h1`
   color: #504d4d;
 `;
 
-const BtnStyle = styled.button`
+const BtnStyle = styled.div`
   font-size: 20px;
   color: #3e80bd;
-  border: none;
-  background: none;
+  border: 1px solid #3e80bd;
+  /* background: black; */
   cursor: pointer;
   font-weight: 400;
+  width: 29rem;
+  height: 2.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 15px;
+`;
+
+const TextDiv = styled.div`
+  width: 20rem;
+  height: 50px;
+  background: black;
 `;
 
 // const MyButton = styled(Button)({
@@ -84,8 +94,8 @@ const BtnStyle = styled.button`
 
 // });
 
-let ppp = async() => {
-  return await axios.post("http://localhost:8080/user/mypage", )
+let ppp = async () => {
+  return await axios.post("http://localhost:8080/user/mypage");
 };
 
 let pageLoad = () => {
@@ -93,28 +103,32 @@ let pageLoad = () => {
 };
 
 let Mypage = () => {
-
-
-
   const [cookies, setCookie, removeCookie] = useCookies(["token"]);
   const [change, setChange] = useState("");
-  const [userData , setUserData] = useState({
-    user_id : cookies.token.user_id,
-    name : cookies.token.name,
-    password : "",
-    nickName : "",
-  })
+  const navigate = useNavigate();
 
+  const [userData, setUserData] = useState({
+    user_id: cookies.token.user_id,
+    name: cookies.token.name,
+    password: "",
+    nickName: cookies.token.profile_nick,
+  });
+
+  let logOutBtn = () => {
+    removeCookie("token", { path: "/" });
+    navigate("/");
+  };
+
+  console.log(cookies.token);
 
   useEffect(() => {
     console.log("cookie", cookies);
     if (cookies.token === undefined) {
       alert("로그인이 필요합니다.");
-      Navigate("../login");
+      navigate("../login");
     }
   }, []);
 
-  
   let changeState = (name) => {
     console.log(name);
     console.log(cookies);
@@ -173,7 +187,6 @@ let Mypage = () => {
             onClick={() => {
               changeState("bookmark");
             }}
-            
           >
             {" "}
             북마크
@@ -190,7 +203,7 @@ let Mypage = () => {
         <DivStyle4>
           <div style={{ margin: "30px" }}>
             {change === "user" ? (
-              <UBox userData={userData}/>
+              <UBox userData={userData} />
             ) : change === "bookmark" ? (
               <p>아직 안만든 북마크</p>
             ) : change === "secession" ? (
