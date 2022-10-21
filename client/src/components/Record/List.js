@@ -225,7 +225,7 @@ const List = () => {
                             console.log(res);
                             if (res.data.status) {
                                 alert(res.data.message);
-                                window.location.reload();
+                                navigate('/record/favorite');
                             }
                         }).catch(err => {
                             console.log(err)
