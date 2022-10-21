@@ -74,7 +74,7 @@ router.post("/login", async (req, res, next) => {
     {
       user_id: checkEmail.user_id,
       name: checkEmail.name,
-      profile_nick: checkEmail.profile_nick
+      profile_nick: checkEmail.profile_nick,
     },
     jwtConfig.secret,
     {
@@ -92,25 +92,43 @@ router.post("/login", async (req, res, next) => {
           aceessToken: token,
           user_id: checkEmail.user_id,
           name: checkEmail.name,
-          profile_nick: checkEmail.profile_nick
+          profile_nick: checkEmail.profile_nick,
         });
       }
     }
   );
 });
 
+//회원탈퇴
+//http://localhost:8080/user/delete
 router.post("/delete", async (req, res, next) => {
-  let { user_id } = req.body;
-  try {
-    //shortId에 해당하는 유저를 삭제함
-    await User.deleteMany({ user_id });
+  let { user_id, password } = req.body;
 
+  let checkUser = await User.findOne({ user_id });
+
+  let hashPassword = passwordHash(password);
+
+  if (checkUser.password !== hashPassword) {
     res.json({
-      status: true,
-      message: "회원을 삭제하였습니다.",
+      status: false,
+      message: "비밀번호가 틀렸습니다.",
     });
-  } catch (e) {
-    next(e);
+    return;
+  }
+
+  if (checkUser.password === hashPassword) {
+    try {
+      //shortId에 해당하는 유저를 삭제함
+      await User.deleteMany({ user_id });
+
+      res.json({
+        status: true,
+        message: "회원을 삭제하였습니다.",
+      });
+    } catch (e) {
+      next(e);
+    }
+    return;
   }
 });
 

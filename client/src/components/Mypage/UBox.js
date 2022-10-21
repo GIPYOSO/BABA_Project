@@ -18,9 +18,7 @@ let UBox = (props) => {
 
   return (
     <>
-   
-        <TextStyle> 회원관리 및 수정 </TextStyle>
-    
+      <TextStyle>{props.userData.nickName}님의 회원정보 </TextStyle>
 
       <hr
         style={{

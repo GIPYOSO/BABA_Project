@@ -17,14 +17,17 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import Aside from "./../components/Common/Aside/aside";
 import Nabvar from "./../components/Common/Nav/NavVar";
+import userPhoto from "./../assets/images/user.png"
 
 const Divstyle1 = styled.div`
-  width: 1460px;
+  max-width: 1519px;
+  width: 100%;
   height: 800px;
-  border: 1px solid #d9d9d9;
+  /* border: 1px solid #d9d9d9; */
   float: right;
-  /* padding: 30px; */
   bottom: 0px;
+  padding: 30px;
+  box-sizing: border-box;
   position: relative;
 `;
 
@@ -39,11 +42,11 @@ const Divstyle2 = styled.div`
 
 const Divstyle3 = styled.div`
   width: 460px;
-  height: 210px;
+  height: 200px;
   border: 1px solid #d9d9d9;
   position: absolute;
   padding: 30px;
-  bottom: 113px;
+  bottom: 35px;
 `;
 
 const DivStyle4 = styled.div`
@@ -55,7 +58,7 @@ const DivStyle4 = styled.div`
 `;
 
 const NavStyle = styled.div`
-  width: 78.5%;
+  width: 80%;
   float: right;
 `;
 
@@ -119,7 +122,7 @@ let Mypage = () => {
     navigate("/");
   };
 
-  console.log(cookies.token);
+  console.log("쿠키입니다", cookies.token);
 
   useEffect(() => {
     console.log("cookie", cookies);
@@ -153,26 +156,9 @@ let Mypage = () => {
       <Divstyle1>
         <TextStyle>마이페이지</TextStyle>
         <Divstyle2>
-          <hr
-            style={{
-              background: "#D9D9D9",
-              height: 1.05,
-              border: 0,
-              marginBottom: 20,
-            }}
-          />
-
-          <div style={{ width: 450, height: 250, margin: 10, border: "solid" }}>
-            photo
-          </div>
-          <IconButton
-            color="primary"
-            aria-label="upload picture"
-            component="label"
-          >
-            <input hidden accept="image/*" type="file" />
-            <PhotoCamera />
-          </IconButton>
+         
+            <img src={userPhoto} style={{width : 340, height : 340}}></img>
+     
         </Divstyle2>
         <Divstyle3>
           <BtnStyle
@@ -181,7 +167,7 @@ let Mypage = () => {
             }}
           >
             {" "}
-            회원관리 및 수정
+            회원정보
           </BtnStyle>
           <BtnStyle
             onClick={() => {
@@ -207,7 +193,7 @@ let Mypage = () => {
             ) : change === "bookmark" ? (
               <p>아직 안만든 북마크</p>
             ) : change === "secession" ? (
-              <SBox />
+              <SBox userData={userData} />
             ) : (
               <UBox userData={userData} />
             )}

@@ -55,7 +55,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: "20ch",
+      width: "25ch",
     },
   },
 }));
@@ -113,8 +113,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-      <MenuItem onClick={handleLogoutClose}>Logout</MenuItem>
+      <MenuItem onClick={handleMenuClose}>My account&nbsp;&nbsp;&gt;</MenuItem>
+      <MenuItem onClick={handleLogoutClose}>Logout&nbsp;&nbsp;&gt;</MenuItem>
     </Menu>
   );
 
@@ -172,7 +172,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 2 }}>
         <AppBar position="static">
           <Toolbar>
             <Search>
