@@ -12,6 +12,10 @@ function TodoList(){
     const [inputValue, setInputValue] = useState("");
     const [newTodoList, setNewTodoList]  = useState([]);
 
+    useEffect(() => {
+        getTodoData()
+    }, [])
+
     useEffect(()=>{
         console.log(inputValue)
         console.log("skskskssk", todoList)
@@ -23,6 +27,14 @@ function TodoList(){
             user_id: cookies.token.user_id,
             content: inputValue,
             date: ""
+        }).then(res => {
+            axios.get(`http://localhost:8080/todo/${cookies.token.user_id}`).then(res2 => {
+                let response = res2.data
+                console.log("응답된 코드 입니다", response);
+                setNewTodoList(response)
+            }).catch(e => {
+                console.log(e)
+            })
         })
     }
 

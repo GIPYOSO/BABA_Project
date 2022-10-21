@@ -6,14 +6,11 @@ import axios from "axios";
 import styled from "styled-components";
 import Memo from "./Memo";
 import TodoList from "./Todo";
-// import FullCalendar from "@fullcalendar/react";
-// import dayGridPlugin from "@fullcalendar/daygrid";
-// import $ from "jquery";
 
 
 const TabMenuBox = styled.div`
   width: 100%;
-  max-width: 515px;
+  border-bottom: 1px solid #ccc;
 `;
 
 const TabContentBox = styled.div`
@@ -23,14 +20,14 @@ const TabContentBox = styled.div`
 `;
 
 const TabBtn = styled.button`
-  font-size: 20px;
-  color: #3e80bd;
-  border: 1px solid #3e80bd;
+  font-size: 15px;
+  border: 0px none;
   cursor: pointer;
-  background-color: #fff;
   line-height: 40px;
   margin-top: 67px;
   width: 50%;
+  background: #ebebeb;
+}
 `;
 
 const TabSaveBtn = styled.button`
@@ -42,7 +39,7 @@ let Tabmenu = (props) => {
   
   let noteData = props.noteData;
 
-  const [ChangeMenu, setChangeMenu] = useState("");
+  const [ChangeMenu, setChangeMenu] = useState("memo");
   
   const [tabMemo, setTabMemo] = useState('')
 
@@ -70,6 +67,7 @@ let Tabmenu = (props) => {
     <div className="tabBox">
       <TabMenuBox>
         <TabBtn
+          style={ChangeMenu === "memo" ? {fontWeight:'bold', background: '#ebebeb'} : {fontWeight:'normal', background: '#fff'}}
           onClick={() => {
             changeState("memo");
             props.setNoteData({
@@ -81,6 +79,7 @@ let Tabmenu = (props) => {
           {""}메모
         </TabBtn>
         <TabBtn
+          style={ChangeMenu === "todo" ? {fontWeight:'bold', background: '#ebebeb'} : {fontWeight:'normal', background: '#fff'}}
           onClick={() => {
             changeState("todo");
           }}
