@@ -51,7 +51,7 @@ const Detail = () => {
         console.log(res);
         if (res.data.status) {
           alert("수정되었습니다.");
-          // navigate('/record')
+          navigate('/record')
         }
       })
       .catch((e) => {
