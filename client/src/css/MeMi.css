@@ -72,7 +72,8 @@
 
     .MMSection .MMBox .detail .contentWrap .rightBox{
         float: right;
-        width: 36%;
+        width: 32%;
+        padding-right: 30px;
     }
     .MMSection .MMBox .detail .contentWrap .rightBox .tabBox{
         margin-bottom: 20px;
@@ -82,7 +83,16 @@
         display: block; margin: 20px 0 20px 10px;
     }
     .MMSection .MMBox .detail textarea{
-        margin-left: 10px; width: 95%; height: 450px; font-size: 16px; font-family: Roboto;
+        box-sizing: border-box;
+        margin-top: 20px;
+        padding: 20px;
+        width: 100%; 
+        height: 520px; 
+        background: #fffde1;
+        font-size: 16px; 
+        font-family: Roboto;
+        box-shadow: rgb(157 157 157 / 60%) -1px 1px 10px;
+        border:0px none;
     }
     .MMSection .MMBox .detail .date{
         text-align: right; color:#626262;
@@ -141,6 +151,10 @@
     .MMSection .MMBox .detail .titleWrap{
         padding: 30px;
         border-bottom:1px solid #d9d9d9
+    }
+    
+    .MMSection .MMBox .detail .buttonWrap{
+        text-align: right; width: 100%;
     }
 
     .MMSection .MMBox .detail .contentWrap .clear{
