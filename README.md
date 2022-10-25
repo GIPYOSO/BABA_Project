@@ -1,11 +1,11 @@
 # BADA AI 음성 회의록
 > 오픈 STT API를 이용한 AI 회의록 서비스
 
-❓ Problem : 음성을 회의록으로 변환해주는 웹사이트는 많은데 다른 부가 기능을 제공해주는 사이트는 없을까?
-‼️ Idea : 사용자에게 맞춘 템플릿을 함께 제공하면 어떨까?
+❓ Problem : 음성을 회의록으로 변환해주는 웹사이트는 많은데 다른 부가 기능을 제공해주는 사이트는 없을까?  
+‼️ Idea : 사용자에게 맞춘 템플릿을 함께 제공하면 어떨까?  
 💯 Solution : AI 회의록 + 메모와 할일 기능을 제공하는 웹사이트를 만들자
 
-![](/client/src/assets/images/upload_icon.png)
+![](/client/src/assets/images/recordPage.png)
 
 ## 주요 기능과 로직
 
