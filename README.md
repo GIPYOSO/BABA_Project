@@ -21,24 +21,24 @@
 * 회원가입, 로그인, 회원탈퇴
 * DB : 새로 생성된 데이터(user, note, todo) 저장
 
-## 기술 스택 : 
+## 기술 스택
 
-* Front
-Javascript, React
-* Back
-Javascript, node js, Express, mongoDB
-* IDE
-Visual Studio Code
-* Ui
-Figma
-* AI Model
-Vito
-* Collaboration tools
-Github, Notion
+* Front  
+    * Javascript, React  
+* Back  
+    * Javascript, node js, Express, mongoDB  
+* IDE  
+    * Visual Studio Code  
+* Ui  
+    * Figma  
+* AI Model  
+    * Vito  
+* Collaboration tools  
+    * Github, Notion
 
 ## 개발 기간
 2022.09.16 ~ 2022.10.21
 
 ## 기획 & 설계
-[기술 명세서](https://www.notion.so/dcb026f6c8e84666b25c0266653f1ec5)
-[DB 명세서](https://nutritious-albacore-e40.notion.site/DB-3344dbed52df49789dd2fd9389d73ed7)
+* [기술 명세서](https://www.notion.so/dcb026f6c8e84666b25c0266653f1ec5)  
+* [DB 명세서](https://nutritious-albacore-e40.notion.site/DB-3344dbed52df49789dd2fd9389d73ed7)
