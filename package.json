@@ -1,0 +1,12 @@
+{
+  "homepage": "https://GIPYOSO.github.io/BADA_Project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build" : "webpack"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
